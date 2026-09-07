@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Model weights (large binary files, downloaded/added at runtime)
+*.pt
+!models/.gitkeep
