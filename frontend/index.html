@@ -117,8 +117,8 @@
             font-weight: 800;
             letter-spacing: 2px;
             background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-green));
-            background-clip: text;
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -1608,17 +1608,24 @@
         const ZONE_Y2 = 220;
 
         // ============================================
-        // WEBSOCKET
+        // WEBSOCKET - FIXED FOR HTTPS (wss://)
         // ============================================
         let socket = null;
         let reconnectTimer = null;
 
         function connectWebSocket() {
-            socket = new WebSocket(`ws://${window.location.host}/ws`);
+            // Auto-detect protocol: HTTP → ws, HTTPS → wss
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${window.location.host}/ws`;
+            
+            console.log('🔌 Connecting to WebSocket:', wsUrl);
+            
+            socket = new WebSocket(wsUrl);
 
             socket.onopen = function() {
                 wsDot.className = 'dot online';
                 wsStatusText.textContent = 'Online';
+                console.log('✅ WebSocket connected');
             };
 
             socket.onmessage = function(e) {
@@ -1631,14 +1638,16 @@
                 } catch (_) {}
             };
 
-            socket.onerror = function() {
+            socket.onerror = function(error) {
                 wsDot.className = 'dot offline';
                 wsStatusText.textContent = 'Error';
+                console.error('❌ WebSocket error:', error);
             };
 
             socket.onclose = function() {
                 wsDot.className = 'dot offline';
                 wsStatusText.textContent = 'Disconnected';
+                console.log('🔌 WebSocket disconnected');
                 if (reconnectTimer) clearTimeout(reconnectTimer);
                 reconnectTimer = setTimeout(connectWebSocket, 3000);
             };
@@ -1996,7 +2005,7 @@
         }
 
         // ============================================
-        // CAMERA - ULTIMATE FAST (80ms = 12.5 FPS)
+        // CAMERA
         // ============================================
         let stream = null;
         let frameTimer = null;
@@ -2058,7 +2067,6 @@
             canvas.height = 360;
             const cctx = canvas.getContext('2d');
 
-            // ✅ ULTIMATE FAST: 80ms = 12.5 FPS
             frameTimer = setInterval(() => {
                 if (!socket || socket.readyState !== WebSocket.OPEN) return;
                 if (camera.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) return;
@@ -2070,7 +2078,7 @@
                         frameCount++;
                     }
                 }, 'image/jpeg', 0.6);
-            }, 80); // ✅ 80ms = 12.5 FPS
+            }, 80);
         }
 
         function startFPS() {
@@ -2092,8 +2100,8 @@
         startBtn.addEventListener('click', startCamera);
         stopBtn.addEventListener('click', stopCamera);
 
-        setTimeout(() => addLog('NEXUS SENTINEL initialized - Fast Mode'), 400);
-        console.log('NEXUS SENTINEL v2.0 · Ultimate Fast Mode (12.5 FPS)');
+        setTimeout(() => addLog('NEXUS SENTINEL initialized - Deploy Mode'), 400);
+        console.log('🛡️ NEXUS SENTINEL v2.0 · Deploy Mode');
     </script>
 
 </body>
