@@ -1,0 +1,7 @@
+[phases]
+  [phases.install]
+    nixPkgs = ["libGL"]  # Add system library support if needed
+    cmds = [
+      "pip install -r requirements.txt",
+      "pip uninstall -y opencv-python"  # Remove GUI version, keep headless
+    ]
