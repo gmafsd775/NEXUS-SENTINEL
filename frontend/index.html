@@ -118,7 +118,6 @@
             letter-spacing: 2px;
             background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-green));
             -webkit-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -229,7 +228,6 @@
             padding: 1px;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent, rgba(255, 255, 255, 0.02));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
             pointer-events: none;
@@ -1608,13 +1606,13 @@
         const ZONE_Y2 = 220;
 
         // ============================================
-        // WEBSOCKET - FIXED FOR HTTPS (wss://)
+        // WEBSOCKET - FIXED FOR HTTPS
         // ============================================
         let socket = null;
         let reconnectTimer = null;
+        let heartbeatInterval = null;
 
         function connectWebSocket() {
-            // Auto-detect protocol: HTTP → ws, HTTPS → wss
             const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
             const wsUrl = `${protocol}//${window.location.host}/ws`;
             
@@ -1626,12 +1624,33 @@
                 wsDot.className = 'dot online';
                 wsStatusText.textContent = 'Online';
                 console.log('✅ WebSocket connected');
+                
+                // ✅ Send heartbeat every 20 seconds to keep connection alive
+                if (heartbeatInterval) clearInterval(heartbeatInterval);
+                heartbeatInterval = setInterval(() => {
+                    if (socket.readyState === WebSocket.OPEN) {
+                        try {
+                            socket.send(JSON.stringify({ type: 'ping' }));
+                            console.log('💓 Heartbeat sent');
+                        } catch (e) {
+                            console.warn('Heartbeat send failed:', e);
+                        }
+                    }
+                }, 20000);
             };
 
             socket.onmessage = function(e) {
                 try {
                     const startTime = performance.now();
-                    handleMessage(JSON.parse(e.data));
+                    const data = JSON.parse(e.data);
+                    
+                    // Handle ping response
+                    if (data.type === 'ping') {
+                        console.log('💓 Heartbeat received');
+                        return;
+                    }
+                    
+                    handleMessage(data);
                     const endTime = performance.now();
                     const latency = Math.round(endTime - startTime);
                     latencyMetric.textContent = latency + 'ms';
@@ -1648,6 +1667,7 @@
                 wsDot.className = 'dot offline';
                 wsStatusText.textContent = 'Disconnected';
                 console.log('🔌 WebSocket disconnected');
+                if (heartbeatInterval) clearInterval(heartbeatInterval);
                 if (reconnectTimer) clearTimeout(reconnectTimer);
                 reconnectTimer = setTimeout(connectWebSocket, 3000);
             };
@@ -2005,7 +2025,7 @@
         }
 
         // ============================================
-        // CAMERA
+        // CAMERA - FAST (50ms = 20 FPS)
         // ============================================
         let stream = null;
         let frameTimer = null;
@@ -2067,6 +2087,7 @@
             canvas.height = 360;
             const cctx = canvas.getContext('2d');
 
+            // ✅ FAST: 50ms = 20 FPS
             frameTimer = setInterval(() => {
                 if (!socket || socket.readyState !== WebSocket.OPEN) return;
                 if (camera.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) return;
@@ -2078,14 +2099,14 @@
                         frameCount++;
                     }
                 }, 'image/jpeg', 0.6);
-            }, 80);
+            }, 50); // ✅ 50ms = 20 FPS
         }
 
         function startFPS() {
             if (fpsTimer) clearInterval(fpsTimer);
             frameCount = 0;
             fpsTimer = setInterval(() => {
-                const fps = Math.round(frameCount * 12.5);
+                const fps = Math.round(frameCount * 20);
                 fpsDisplay.innerHTML = `<i class="fas fa-chart-line"></i> ${fps} FPS`;
                 fpsMetric.textContent = fps;
                 frameCount = 0;
@@ -2100,8 +2121,8 @@
         startBtn.addEventListener('click', startCamera);
         stopBtn.addEventListener('click', stopCamera);
 
-        setTimeout(() => addLog('NEXUS SENTINEL initialized - Deploy Mode'), 400);
-        console.log('🛡️ NEXUS SENTINEL v2.0 · Deploy Mode');
+        setTimeout(() => addLog('NEXUS SENTINEL initialized - Fast Mode'), 400);
+        console.log('🛡️ NEXUS SENTINEL v2.0 · Fast Mode (20 FPS)');
     </script>
 
 </body>
