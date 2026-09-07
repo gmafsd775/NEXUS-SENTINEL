@@ -10,7 +10,7 @@ import os
 import asyncio
 
 # ============================================
-# GET ABSOLUTE PATHS (FOR RENDER)
+# GET ABSOLUTE PATHS
 # ============================================
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -36,7 +36,7 @@ WEAPON_INSIDE_PERSON_THRESHOLD = 0.65
 MOVEMENT_THRESHOLD = 50
 ZONE_DWELL_THRESHOLD = 3.0
 
-app = FastAPI(title="NEXUS SENTINEL - Advanced Security System")
+app = FastAPI(title="NEXUS SENTINEL")
 
 app.add_middleware(
     CORSMiddleware,
@@ -54,9 +54,18 @@ async def root():
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     print("🔌 WebSocket client connected")
-
-    # ✅ REMOVED: Initial message (causing disconnect on Render)
-
+    
+    # ✅ PING EVERY 5 SECONDS TO KEEP CONNECTION ALIVE
+    async def send_ping():
+        while True:
+            await asyncio.sleep(5)
+            try:
+                await websocket.send_text("ping")
+            except:
+                break
+    
+    asyncio.create_task(send_ping())
+    
     log_file = os.path.join(BASE_DIR, "security_events.log")
     if not os.path.exists(log_file):
         with open(log_file, "w") as f:
@@ -72,16 +81,6 @@ async def websocket_endpoint(websocket: WebSocket):
         with open(log_file, "a") as f:
             f.write(log_entry + "\n")
         print(f"📝 LOG: {log_entry}")
-        try:
-            asyncio.create_task(websocket.send_json({
-                "type": "event_log",
-                "timestamp": timestamp,
-                "event_type": event_type,
-                "message": message,
-                "data": data
-            }))
-        except:
-            pass
 
     zone_tracker = {}
     movement_tracker = {}
@@ -98,23 +97,16 @@ async def websocket_endpoint(websocket: WebSocket):
                 break
             
             if "text" in data:
-                message = data["text"]
-                print(f"📨 Received: {message}")
-                try:
-                    await websocket.send_json({
-                        "type": "echo",
-                        "message": message
-                    })
-                except:
-                    pass
+                print(f"📨 Received text: {data['text']}")
+                continue
             
             elif "bytes" in data:
                 try:
                     frame = data["bytes"]
+                    print(f"📷 Frame received: {len(frame) / 1024:.1f} KB")
+                    
                     nparr = np.frombuffer(frame, np.uint8)
                     image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-                    
-                    print(f"📷 Frame received: {len(data['bytes']) / 1024:.1f} KB")
                     
                     # ==========================================
                     # PERSON DETECTION
@@ -147,16 +139,16 @@ async def websocket_endpoint(websocket: WebSocket):
                             if in_zone:
                                 if person_id not in zone_tracker:
                                     zone_tracker[person_id] = current_time
-                                    log_event("ZONE_ENTRY", f"Person {person_id} entered restricted zone", {"center": [center_x, center_y]})
+                                    log_event("ZONE_ENTRY", f"Person {person_id} entered restricted zone")
                                 dwell_time = current_time - zone_tracker[person_id]
                                 if dwell_time >= ZONE_DWELL_THRESHOLD:
                                     prolonged = True
                                     zone_active = True
-                                    log_event("PROLONGED_STAY", f"Person {person_id} in zone for {dwell_time:.1f}s", {"dwell_time": dwell_time})
+                                    log_event("PROLONGED_STAY", f"Person {person_id} in zone for {dwell_time:.1f}s")
                             else:
                                 if person_id in zone_tracker:
                                     del zone_tracker[person_id]
-                                    log_event("ZONE_EXIT", f"Person {person_id} left restricted zone", {})
+                                    log_event("ZONE_EXIT", f"Person {person_id} left restricted zone")
                             
                             movement_detected = False
                             movement_distance = 0
@@ -173,24 +165,17 @@ async def websocket_endpoint(websocket: WebSocket):
                                     movement_detected = True
                                     movement_distance = distance
                                     movement_speed = speed
-                                    log_event("MOVEMENT_ALERT", f"Person {person_id} moved {distance:.1f}px", {"distance": distance, "speed": speed})
-                                    try:
-                                        await websocket.send_json({
-                                            "type": "movement_alert",
-                                            "message": f"🏃 Significant movement detected! Distance: {distance:.1f}px, Speed: {speed:.1f}px/s",
-                                            "person_id": person_id
-                                        })
-                                    except:
-                                        pass
+                                    log_event("MOVEMENT_ALERT", f"Person {person_id} moved {distance:.1f}px")
                                 
                                 movement_tracker[person_id] = {"position": [center_x, center_y], "time": current_time}
                             else:
                                 movement_tracker[person_id] = {"position": [center_x, center_y], "time": current_time}
                             
+                            # ✅ BBOX ADDED
                             persons.append({
                                 "id": person_id,
                                 "center": [center_x, center_y],
-                                "bbox": [x1, y1, x2, y2],
+                                "bbox": [x1, y1, x2, y2],  # ✅ ADDED
                                 "in_zone": in_zone,
                                 "prolonged": prolonged,
                                 "dwell_time": round(dwell_time, 1),
@@ -241,10 +226,11 @@ async def websocket_endpoint(websocket: WebSocket):
                             KNIFE_THRESHOLD = 0.20
                             if confidence > KNIFE_THRESHOLD:
                                 weapon_count += 1
+                                # ✅ BBOX ADDED
                                 weapon_list.append({
                                     "name": weapon_name,
                                     "confidence": confidence,
-                                    "bbox": [wx1, wy1, wx2, wy2],
+                                    "bbox": [wx1, wy1, wx2, wy2],  # ✅ ADDED
                                     "matched_person": matched_person_id
                                 })
                                 
@@ -256,31 +242,19 @@ async def websocket_endpoint(websocket: WebSocket):
                                             threat_detected = True
                                 
                                 print(f"🔪 KNIFE DETECTED: {weapon_name} ({confidence:.2f})")
-                                try:
-                                    await websocket.send_json({
-                                        "type": "weapon_alert",
-                                        "weapon": weapon_name,
-                                        "confidence": confidence,
-                                        "matched_person": matched_person_id,
-                                        "threat_level": "high" if matched_person_id else "medium"
-                                    })
-                                except:
-                                    pass
-                                log_event("WEAPON_DETECTED", f"{weapon_name} detected!", {
-                                    "confidence": confidence,
-                                    "matched_person": matched_person_id
-                                })
+                                log_event("WEAPON_DETECTED", f"{weapon_name} detected!")
                             else:
-                                print(f"⚠️ Knife filtered: confidence too low ({confidence:.2f})")
+                                print(f"⚠️ Knife filtered: {confidence:.2f}")
                         
                         elif weapon_name == "guns":
                             GUN_THRESHOLD = 0.55
                             if confidence > GUN_THRESHOLD:
                                 weapon_count += 1
+                                # ✅ BBOX ADDED
                                 weapon_list.append({
                                     "name": weapon_name,
                                     "confidence": confidence,
-                                    "bbox": [wx1, wy1, wx2, wy2],
+                                    "bbox": [wx1, wy1, wx2, wy2],  # ✅ ADDED
                                     "matched_person": matched_person_id
                                 })
                                 
@@ -292,49 +266,20 @@ async def websocket_endpoint(websocket: WebSocket):
                                             threat_detected = True
                                 
                                 print(f"🔫 GUN DETECTED: {weapon_name} ({confidence:.2f})")
-                                try:
-                                    await websocket.send_json({
-                                        "type": "weapon_alert",
-                                        "weapon": weapon_name,
-                                        "confidence": confidence,
-                                        "matched_person": matched_person_id,
-                                        "threat_level": "high" if matched_person_id else "medium"
-                                    })
-                                except:
-                                    pass
-                                log_event("WEAPON_DETECTED", f"{weapon_name} detected!", {
-                                    "confidence": confidence,
-                                    "matched_person": matched_person_id
-                                })
+                                log_event("WEAPON_DETECTED", f"{weapon_name} detected!")
                             else:
-                                print(f"⚠️ Gun filtered: confidence too low ({confidence:.2f})")
+                                print(f"⚠️ Gun filtered: {confidence:.2f}")
                     
                     if threat_detected:
                         armed_persons = [p for p in persons if p.get("has_weapon", False)]
                         if armed_persons:
-                            try:
-                                await websocket.send_json({
-                                    "type": "threat_alert",
-                                    "severity": "HIGH",
-                                    "message": f"⚠️ {len(armed_persons)} person(s) with weapon detected!",
-                                    "armed_persons": armed_persons
-                                })
-                            except:
-                                pass
-                            log_event("THREAT_ALERT", f"{len(armed_persons)} armed person(s) detected!", {
-                                "armed_persons": len(armed_persons)
-                            })
+                            log_event("THREAT_ALERT", f"{len(armed_persons)} armed person(s) detected!")
                     
                     prolonged_detected = any(p.get("prolonged", False) for p in persons)
                     if prolonged_detected:
-                        try:
-                            await websocket.send_json({
-                                "type": "prolonged_alert",
-                                "message": f"⚠️ Person has been in restricted zone!"
-                            })
-                        except:
-                            pass
+                        log_event("PROLONGED_ALERT", "Person in restricted zone!")
                     
+                    # ✅ SEND RESPONSE
                     response = {
                         "type": "detection",
                         "person_count": person_count,
@@ -349,8 +294,9 @@ async def websocket_endpoint(websocket: WebSocket):
                     
                     try:
                         await websocket.send_json(response)
-                    except:
-                        pass
+                        print(f"📤 Sent: {person_count} persons, {weapon_count} weapons")
+                    except Exception as e:
+                        print(f"❌ Send failed: {e}")
                     
                 except WebSocketDisconnect:
                     print("🔌 WebSocket disconnected during processing")
