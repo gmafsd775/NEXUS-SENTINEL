@@ -22,19 +22,24 @@ model_person = None
 model_weapon = None
 
 try:
-    model_person = YOLO(os.path.join(BASE_DIR, "yolo11n.pt"))
+    person_model_path = os.path.join(BASE_DIR, "yolo11n.pt")
+    print(f"Loading person detection model from: {person_model_path}")
+    model_person = YOLO(person_model_path)  # YOLO auto-downloads from hub if missing
     print("✅ Person detection model loaded!")
 except Exception as e:
-    print(f"⚠️ Person model not found: {e}")
+    print(f"❌ Person model failed: {e}")
 
 try:
-    model_weapon = YOLO(os.path.join(BASE_DIR, "models", "weapon_model_final.pt"))
+    weapon_model_path = os.path.join(BASE_DIR, "models", "weapon_model_final.pt")
+    model_weapon = YOLO(weapon_model_path)
     print("✅ Weapon detection model loaded!")
 except Exception as e:
-    print(f"⚠️ Weapon model not found: {e}")
+    print(f"⚠️ Weapon model not found at {weapon_model_path}")
+    print(f"   To enable weapon detection, add your trained model file there.")
+    print(f"   Error: {e}")
 
 if model_person is None or model_weapon is None:
-    print("⚠️ Warning: One or more models failed to load. WebSocket endpoint will return an error.")
+    print("⚠️ Warning: One or more models unavailable. WebSocket endpoint will return an error.")
 
 # ============================================
 # CONFIGURATION
