@@ -54,9 +54,8 @@ async def root():
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     print("🔌 WebSocket client connected")
-    
-    # ✅ REMOVED: Initial system message (causing disconnect on Render)
-    # await websocket.send_json({...})
+
+    # ✅ REMOVED: Initial message (causing disconnect on Render)
 
     log_file = os.path.join(BASE_DIR, "security_events.log")
     if not os.path.exists(log_file):
