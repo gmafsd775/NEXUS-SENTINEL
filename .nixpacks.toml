@@ -1,0 +1,7 @@
+[phases]
+  [phases.install]
+    nixPkgs = ["libGL"]  # Add system library support if needed
+    cmds = [
+      "echo 'opencv-python==999.999.999' > /tmp/constraints.txt",
+      "pip install -c /tmp/constraints.txt -r requirements.txt"
+    ]

@@ -18,9 +18,28 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # LOAD MODELS
 # ============================================
 print("🔄 Loading models...")
-model_person = YOLO(os.path.join(BASE_DIR, "yolo11n.pt"))
-model_weapon = YOLO(os.path.join(BASE_DIR, "models", "weapon_model_final.pt"))
-print("✅ Models loaded!")
+model_person = None
+model_weapon = None
+
+try:
+    person_model_path = os.path.join(BASE_DIR, "yolo11n.pt")
+    print(f"Loading person detection model from: {person_model_path}")
+    model_person = YOLO(person_model_path)  # YOLO auto-downloads from hub if missing
+    print("✅ Person detection model loaded!")
+except Exception as e:
+    print(f"❌ Person model failed: {e}")
+
+try:
+    weapon_model_path = os.path.join(BASE_DIR, "models", "weapon_model_final.pt")
+    model_weapon = YOLO(weapon_model_path)
+    print("✅ Weapon detection model loaded!")
+except Exception as e:
+    print(f"⚠️ Weapon model not found at {weapon_model_path}")
+    print(f"   To enable weapon detection, add your trained model file there.")
+    print(f"   Error: {e}")
+
+if model_person is None or model_weapon is None:
+    print("⚠️ Warning: One or more models unavailable. WebSocket endpoint will return an error.")
 
 # ============================================
 # CONFIGURATION
@@ -54,6 +73,11 @@ async def root():
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     print("🔌 WebSocket client connected")
+
+    if model_person is None or model_weapon is None:
+        await websocket.send_json({"error": "Models not loaded. Please upload model files."})
+        await websocket.close()
+        return
     
     # ✅ PING EVERY 5 SECONDS TO KEEP CONNECTION ALIVE
     async def send_ping():
