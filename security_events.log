@@ -1,0 +1,674 @@
+=== NEXUS SENTINEL SECURITY LOG ===
+Started: 2026-09-05 15:14:44.772888
+==================================================
+
+[2026-09-05 15:15:55] ZONE_ENTRY: Person p54_14 entered restricted zone | Data: {'center': [544.7108764648438, 140.562744140625]}
+[2026-09-05 15:15:59] ZONE_ENTRY: Person p54_17 entered restricted zone | Data: {'center': [546.38525390625, 174.9589080810547]}
+[2026-09-05 15:16:04] ZONE_ENTRY: Person p54_15 entered restricted zone | Data: {'center': [541.5926666259766, 155.6414031982422]}
+[2026-09-05 15:16:06] PROLONGED_STAY: Person p54_17 in zone for 7.0s | Data: {'dwell_time': 6.99764084815979}
+[2026-09-05 15:16:07] PROLONGED_STAY: Person p54_14 in zone for 11.8s | Data: {'dwell_time': 11.757037878036499}
+[2026-09-05 15:16:08] ZONE_ENTRY: Person p54_18 entered restricted zone | Data: {'center': [544.6102447509766, 180.34246826171875]}
+[2026-09-05 15:16:12] ZONE_ENTRY: Person p60_18 entered restricted zone | Data: {'center': [608.4549560546875, 181.9268341064453]}
+[2026-09-05 15:16:14] ZONE_ENTRY: Person p60_21 entered restricted zone | Data: {'center': [600.626220703125, 214.78646850585938]}
+[2026-09-05 15:16:14] ZONE_ENTRY: Person p59_21 entered restricted zone | Data: {'center': [599.7698974609375, 216.4145965576172]}
+[2026-09-05 15:16:16] ZONE_ENTRY: Person p59_20 entered restricted zone | Data: {'center': [591.7706909179688, 200.68386840820312]}
+[2026-09-05 15:16:17] ZONE_ENTRY: Person p59_19 entered restricted zone | Data: {'center': [595.284912109375, 195.02764892578125]}
+[2026-09-05 15:16:19] ZONE_ENTRY: Person p61_14 entered restricted zone | Data: {'center': [616.233154296875, 143.39437866210938]}
+[2026-09-05 15:16:20] PROLONGED_STAY: Person p59_21 in zone for 5.5s | Data: {'dwell_time': 5.450668811798096}
+[2026-09-05 15:16:20] ZONE_ENTRY: Person p62_14 entered restricted zone | Data: {'center': [620.715576171875, 140.1166229248047]}
+[2026-09-05 15:16:21] ZONE_ENTRY: Person p60_17 entered restricted zone | Data: {'center': [600.1513671875, 174.0884132385254]}
+[2026-09-05 15:16:37] PROLONGED_STAY: Person p59_21 in zone for 22.5s | Data: {'dwell_time': 22.470449447631836}
+[2026-09-05 15:16:40] ZONE_ENTRY: Person p62_20 entered restricted zone | Data: {'center': [623.2897338867188, 204.0533905029297]}
+[2026-09-05 15:16:40] PROLONGED_STAY: Person p59_20 in zone for 23.9s | Data: {'dwell_time': 23.932233810424805}
+[2026-09-05 15:16:41] ZONE_ENTRY: Person p58_19 entered restricted zone | Data: {'center': [588.30322265625, 198.95516967773438]}
+[2026-09-05 15:16:41] ZONE_ENTRY: Person p58_20 entered restricted zone | Data: {'center': [582.9744262695312, 201.95013427734375]}
+[2026-09-05 15:16:43] ZONE_ENTRY: Person p57_20 entered restricted zone | Data: {'center': [579.917236328125, 205.14942932128906]}
+[2026-09-05 15:16:55] ZONE_ENTRY: Person p61_21 entered restricted zone | Data: {'center': [612.6436767578125, 217.71730041503906]}
+[2026-09-05 15:16:56] ZONE_ENTRY: Person p61_19 entered restricted zone | Data: {'center': [619.31298828125, 192.62261962890625]}
+[2026-09-05 15:17:02] ZONE_ENTRY: Person p62_17 entered restricted zone | Data: {'center': [622.20556640625, 172.85442733764648]}
+[2026-09-05 15:17:06] ZONE_ENTRY: Person p62_19 entered restricted zone | Data: {'center': [621.0386962890625, 193.69825744628906]}
+[2026-09-05 15:17:15] ZONE_ENTRY: Person p62_18 entered restricted zone | Data: {'center': [620.6390380859375, 187.11192321777344]}
+[2026-09-05 15:17:30] PROLONGED_STAY: Person p62_17 in zone for 27.9s | Data: {'dwell_time': 27.85886573791504}
+[2026-09-05 15:17:31] PROLONGED_STAY: Person p62_17 in zone for 28.8s | Data: {'dwell_time': 28.823651790618896}
+[2026-09-05 15:17:32] PROLONGED_STAY: Person p62_17 in zone for 29.8s | Data: {'dwell_time': 29.806281328201294}
+[2026-09-05 15:17:42] PROLONGED_STAY: Person p61_21 in zone for 46.8s | Data: {'dwell_time': 46.806617975234985}
+[2026-09-05 15:18:33] ZONE_ENTRY: Person p52_20 entered restricted zone | Data: {'center': [520.9089508056641, 202.724365234375]}
+[2026-09-05 15:18:34] ZONE_ENTRY: Person p55_20 entered restricted zone | Data: {'center': [556.979736328125, 203.41543579101562]}
+[2026-09-05 15:18:36] ZONE_ENTRY: Person p55_19 entered restricted zone | Data: {'center': [554.28857421875, 191.00918579101562]}
+[2026-09-05 15:18:39] PROLONGED_STAY: Person p55_20 in zone for 5.0s | Data: {'dwell_time': 4.987256050109863}
+[2026-09-05 15:18:39] PROLONGED_STAY: Person p55_20 in zone for 5.5s | Data: {'dwell_time': 5.527785539627075}
+[2026-09-05 15:18:40] PROLONGED_STAY: Person p55_19 in zone for 4.5s | Data: {'dwell_time': 4.4709954261779785}
+[2026-09-05 15:18:41] PROLONGED_STAY: Person p55_20 in zone for 7.0s | Data: {'dwell_time': 7.0320281982421875}
+[2026-09-05 15:18:41] PROLONGED_STAY: Person p55_19 in zone for 5.7s | Data: {'dwell_time': 5.727466106414795}
+[2026-09-05 15:18:42] PROLONGED_STAY: Person p55_20 in zone for 8.1s | Data: {'dwell_time': 8.104875087738037}
+[2026-09-05 15:18:42] PROLONGED_STAY: Person p55_19 in zone for 6.6s | Data: {'dwell_time': 6.580869913101196}
+[2026-09-05 15:26:27] PROLONGED_STAY: Person p62_17 in zone for 565.1s | Data: {'dwell_time': 565.057347536087}
+[2026-09-05 15:26:36] ZONE_ENTRY: Person p61_13 entered restricted zone | Data: {'center': [619.8746337890625, 139.64096069335938]}
+[2026-09-05 15:26:40] ZONE_ENTRY: Person p51_20 entered restricted zone | Data: {'center': [513.8382415771484, 206.17405700683594]}
+[2026-09-05 15:26:41] ZONE_ENTRY: Person p53_19 entered restricted zone | Data: {'center': [534.341796875, 196.67510986328125]}
+[2026-09-05 15:26:41] ZONE_ENTRY: Person p54_19 entered restricted zone | Data: {'center': [540.220703125, 194.0518035888672]}
+[2026-09-05 15:26:42] PROLONGED_STAY: Person p55_19 in zone for 486.7s | Data: {'dwell_time': 486.71312952041626}
+[2026-09-05 15:26:43] ZONE_ENTRY: Person p55_18 entered restricted zone | Data: {'center': [555.8235931396484, 188.6555938720703]}
+[2026-09-05 15:26:44] PROLONGED_STAY: Person p55_19 in zone for 488.2s | Data: {'dwell_time': 488.2179522514343}
+[2026-09-05 15:26:45] PROLONGED_STAY: Person p55_19 in zone for 489.0s | Data: {'dwell_time': 488.9662914276123}
+[2026-09-05 15:26:45] PROLONGED_STAY: Person p55_19 in zone for 489.7s | Data: {'dwell_time': 489.6515507698059}
+[2026-09-05 15:26:46] PROLONGED_STAY: Person p55_19 in zone for 490.3s | Data: {'dwell_time': 490.33864283561707}
+[2026-09-05 15:26:46] ZONE_ENTRY: Person p52_18 entered restricted zone | Data: {'center': [524.7803802490234, 189.21023559570312]}
+[2026-09-05 15:28:06] ZONE_ENTRY: Person p46_18 entered restricted zone | Data: {'center': [466.6950988769531, 180.74525451660156]}
+[2026-09-05 15:28:24] ZONE_ENTRY: Person p46_17 entered restricted zone | Data: {'center': [464.5580749511719, 179.41751098632812]}
+[2026-09-05 15:28:27] PROLONGED_STAY: Person p46_17 in zone for 3.0s | Data: {'dwell_time': 3.011674404144287}
+[2026-09-05 15:28:30] ZONE_ENTRY: Person p47_17 entered restricted zone | Data: {'center': [472.0323181152344, 179.65325927734375]}
+[2026-09-05 15:28:31] PROLONGED_STAY: Person p46_18 in zone for 24.5s | Data: {'dwell_time': 24.459428787231445}
+[2026-09-05 15:28:35] ZONE_ENTRY: Person p45_17 entered restricted zone | Data: {'center': [459.37646484375, 179.96072387695312]}
+[2026-09-05 15:28:37] PROLONGED_STAY: Person p46_18 in zone for 30.5s | Data: {'dwell_time': 30.45008111000061}
+[2026-09-05 15:29:03] ZONE_ENTRY: Person p56_21 entered restricted zone | Data: {'center': [568.657470703125, 217.5957794189453]}
+[2026-09-05 15:29:14] PROLONGED_STAY: Person p46_18 in zone for 68.0s | Data: {'dwell_time': 68.01500368118286}
+[2026-09-05 15:29:16] PROLONGED_STAY: Person p46_18 in zone for 69.5s | Data: {'dwell_time': 69.45985412597656}
+[2026-09-05 15:29:27] ZONE_ENTRY: Person p47_18 entered restricted zone | Data: {'center': [473.5057373046875, 180.2664031982422]}
+[2026-09-05 15:29:31] PROLONGED_STAY: Person p47_17 in zone for 61.0s | Data: {'dwell_time': 61.009833335876465}
+[2026-09-05 15:29:31] PROLONGED_STAY: Person p47_17 in zone for 61.5s | Data: {'dwell_time': 61.51412534713745}
+[2026-09-05 15:29:32] PROLONGED_STAY: Person p47_17 in zone for 62.0s | Data: {'dwell_time': 62.0029730796814}
+[2026-09-05 15:29:34] PROLONGED_STAY: Person p47_17 in zone for 64.5s | Data: {'dwell_time': 64.4969174861908}
+[2026-09-05 15:29:42] PROLONGED_STAY: Person p47_17 in zone for 72.0s | Data: {'dwell_time': 72.00239491462708}
+[2026-09-06 11:35:13] ZONE_ENTRY: Person p52_17 entered restricted zone | Data: {'center': [527.8649291992188, 177.2621307373047]}
+[2026-09-06 11:35:17] ZONE_ENTRY: Person p53_17 entered restricted zone | Data: {'center': [531.2188720703125, 178.91940307617188]}
+[2026-09-06 11:35:18] PROLONGED_STAY: Person p52_17 in zone for 5.5s | Data: {'dwell_time': 5.5454442501068115}
+[2026-09-06 11:35:20] PROLONGED_STAY: Person p52_17 in zone for 7.3s | Data: {'dwell_time': 7.2617199420928955}
+[2026-09-06 11:35:59] ZONE_ENTRY: Person p50_17 entered restricted zone | Data: {'center': [509.57513427734375, 178.77450561523438]}
+[2026-09-06 11:36:10] ZONE_ENTRY: Person p52_18 entered restricted zone | Data: {'center': [522.6021728515625, 189.48422241210938]}
+[2026-09-06 11:36:12] ZONE_ENTRY: Person p53_18 entered restricted zone | Data: {'center': [530.5288696289062, 187.6231689453125]}
+[2026-09-06 11:36:16] PROLONGED_STAY: Person p53_18 in zone for 3.5s | Data: {'dwell_time': 3.480032444000244}
+[2026-09-06 11:36:16] PROLONGED_STAY: Person p53_18 in zone for 4.1s | Data: {'dwell_time': 4.123985528945923}
+[2026-09-06 11:36:17] PROLONGED_STAY: Person p53_18 in zone for 4.7s | Data: {'dwell_time': 4.696359157562256}
+[2026-09-06 11:36:18] PROLONGED_STAY: Person p53_18 in zone for 5.5s | Data: {'dwell_time': 5.515206813812256}
+[2026-09-06 11:36:18] PROLONGED_STAY: Person p53_18 in zone for 6.1s | Data: {'dwell_time': 6.116837978363037}
+[2026-09-06 11:36:19] PROLONGED_STAY: Person p53_18 in zone for 6.8s | Data: {'dwell_time': 6.765968084335327}
+[2026-09-06 11:36:20] PROLONGED_STAY: Person p53_18 in zone for 7.4s | Data: {'dwell_time': 7.43086051940918}
+[2026-09-06 11:36:21] PROLONGED_STAY: Person p53_18 in zone for 8.5s | Data: {'dwell_time': 8.495846271514893}
+[2026-09-06 11:36:21] PROLONGED_STAY: Person p53_18 in zone for 9.1s | Data: {'dwell_time': 9.060266494750977}
+[2026-09-06 11:36:22] PROLONGED_STAY: Person p53_18 in zone for 9.7s | Data: {'dwell_time': 9.683727264404297}
+[2026-09-06 11:36:23] PROLONGED_STAY: Person p53_18 in zone for 10.4s | Data: {'dwell_time': 10.412357568740845}
+[2026-09-06 11:36:23] PROLONGED_STAY: Person p53_18 in zone for 11.2s | Data: {'dwell_time': 11.17715334892273}
+[2026-09-06 11:36:24] PROLONGED_STAY: Person p53_18 in zone for 12.0s | Data: {'dwell_time': 12.049194574356079}
+[2026-09-06 11:36:25] PROLONGED_STAY: Person p53_18 in zone for 12.7s | Data: {'dwell_time': 12.667473793029785}
+[2026-09-06 11:36:35] PROLONGED_STAY: Person p52_18 in zone for 25.8s | Data: {'dwell_time': 25.777162790298462}
+[2026-09-06 11:36:38] PROLONGED_STAY: Person p52_17 in zone for 84.9s | Data: {'dwell_time': 84.94894075393677}
+[2026-09-06 11:36:41] ZONE_ENTRY: Person p49_17 entered restricted zone | Data: {'center': [498.6629333496094, 179.18423461914062]}
+[2026-09-06 11:36:42] PROLONGED_STAY: Person p53_17 in zone for 84.5s | Data: {'dwell_time': 84.5434238910675}
+[2026-09-06 11:36:48] PROLONGED_STAY: Person p52_17 in zone for 95.0s | Data: {'dwell_time': 95.03067231178284}
+[2026-09-06 11:36:51] PROLONGED_STAY: Person p52_17 in zone for 98.0s | Data: {'dwell_time': 97.99793410301208}
+[2026-09-06 11:36:59] PROLONGED_STAY: Person p52_17 in zone for 106.6s | Data: {'dwell_time': 106.56070852279663}
+[2026-09-06 11:37:00] ZONE_ENTRY: Person p51_18 entered restricted zone | Data: {'center': [515.7429351806641, 185.87472534179688]}
+[2026-09-06 11:37:00] ZONE_ENTRY: Person p47_20 entered restricted zone | Data: {'center': [471.73046875, 202.9666748046875]}
+[2026-09-06 11:37:01] ZONE_ENTRY: Person p48_20 entered restricted zone | Data: {'center': [483.08270263671875, 205.38055419921875]}
+[2026-09-06 11:37:02] ZONE_ENTRY: Person p49_20 entered restricted zone | Data: {'center': [491.3796081542969, 205.1630859375]}
+[2026-09-06 11:37:03] ZONE_ENTRY: Person p47_21 entered restricted zone | Data: {'center': [478.7281799316406, 213.74444580078125]}
+[2026-09-06 11:37:04] ZONE_ENTRY: Person p50_21 entered restricted zone | Data: {'center': [505.228759765625, 218.74961853027344]}
+[2026-09-06 11:37:06] ZONE_ENTRY: Person p51_17 entered restricted zone | Data: {'center': [510.2909240722656, 178.01571655273438]}
+[2026-09-06 11:37:07] PROLONGED_STAY: Person p50_17 in zone for 68.1s | Data: {'dwell_time': 68.06762528419495}
+[2026-09-06 11:37:07] PROLONGED_STAY: Person p52_17 in zone for 114.6s | Data: {'dwell_time': 114.60804605484009}
+[2026-09-06 11:37:12] ZONE_ENTRY: Person p49_19 entered restricted zone | Data: {'center': [490.7699890136719, 190.41384887695312]}
+[2026-09-06 11:37:12] PROLONGED_STAY: Person p51_18 in zone for 12.4s | Data: {'dwell_time': 12.389996528625488}
+[2026-09-06 11:37:13] ZONE_ENTRY: Person p51_19 entered restricted zone | Data: {'center': [518.3727874755859, 193.25831604003906]}
+[2026-09-06 11:45:48] ZONE_ENTRY: Person p51_21 entered restricted zone | Data: {'center': [517.5755615234375, 219.31019592285156]}
+[2026-09-06 11:46:25] ZONE_ENTRY: Person p45_17 entered restricted zone | Data: {'center': [453.4660339355469, 179.1929168701172]}
+[2026-09-06 11:46:38] PROLONGED_STAY: Person p45_17 in zone for 13.0s | Data: {'dwell_time': 12.986581087112427}
+[2026-09-06 11:46:39] PROLONGED_STAY: Person p45_17 in zone for 13.9s | Data: {'dwell_time': 13.906060218811035}
+[2026-09-06 11:46:40] PROLONGED_STAY: Person p45_17 in zone for 14.9s | Data: {'dwell_time': 14.896094560623169}
+[2026-09-06 11:46:41] ZONE_ENTRY: Person p46_17 entered restricted zone | Data: {'center': [468.53314208984375, 178.9554443359375]}
+[2026-09-06 11:46:42] PROLONGED_STAY: Person p45_17 in zone for 16.5s | Data: {'dwell_time': 16.493245840072632}
+[2026-09-06 11:46:43] PROLONGED_STAY: Person p45_17 in zone for 17.8s | Data: {'dwell_time': 17.84542202949524}
+[2026-09-06 11:46:44] PROLONGED_STAY: Person p45_17 in zone for 18.4s | Data: {'dwell_time': 18.426671981811523}
+[2026-09-06 11:46:44] ZONE_ENTRY: Person p45_18 entered restricted zone | Data: {'center': [459.4828186035156, 183.07421875]}
+[2026-09-06 11:46:46] PROLONGED_STAY: Person p45_17 in zone for 20.9s | Data: {'dwell_time': 20.9044132232666}
+[2026-09-06 11:46:48] PROLONGED_STAY: Person p45_18 in zone for 3.3s | Data: {'dwell_time': 3.3441576957702637}
+[2026-09-06 11:46:49] PROLONGED_STAY: Person p45_17 in zone for 23.8s | Data: {'dwell_time': 23.808576345443726}
+[2026-09-06 11:46:50] ZONE_ENTRY: Person p47_18 entered restricted zone | Data: {'center': [470.32275390625, 181.7880401611328]}
+[2026-09-06 11:46:51] ZONE_ENTRY: Person p48_21 entered restricted zone | Data: {'center': [486.8597106933594, 216.99374389648438]}
+[2026-09-06 11:47:57] ZONE_ENTRY: Person p56_17 entered restricted zone | Data: {'center': [564.53125, 179.82606506347656]}
+[2026-09-06 11:48:00] ZONE_ENTRY: Person p57_17 entered restricted zone | Data: {'center': [576.6776123046875, 179.588623046875]}
+[2026-09-06 11:48:02] ZONE_ENTRY: Person p58_17 entered restricted zone | Data: {'center': [583.9873046875, 179.66900634765625]}
+[2026-09-06 11:48:06] PROLONGED_STAY: Person p57_17 in zone for 6.0s | Data: {'dwell_time': 6.005028486251831}
+[2026-09-06 11:48:08] PROLONGED_STAY: Person p57_17 in zone for 7.1s | Data: {'dwell_time': 7.148143768310547}
+[2026-09-06 11:48:11] ZONE_ENTRY: Person p54_18 entered restricted zone | Data: {'center': [546.5025024414062, 181.25221252441406]}
+[2026-09-06 11:48:13] ZONE_ENTRY: Person p56_18 entered restricted zone | Data: {'center': [567.6436462402344, 180.46148681640625]}
+[2026-09-06 11:48:13] ZONE_ENTRY: Person p55_18 entered restricted zone | Data: {'center': [552.7950897216797, 183.73025512695312]}
+[2026-09-06 11:48:16] PROLONGED_STAY: Person p55_18 in zone for 3.0s | Data: {'dwell_time': 3.0131607055664062}
+[2026-09-06 11:48:16] ZONE_ENTRY: Person p51_18 entered restricted zone | Data: {'center': [511.6092529296875, 186.43197631835938]}
+[2026-09-06 11:48:19] ZONE_ENTRY: Person p56_19 entered restricted zone | Data: {'center': [566.0031585693359, 198.74667358398438]}
+[2026-09-07 06:39:53] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.30525633692741394}
+[2026-09-07 06:39:54] ZONE_ENTRY: Person p48_17 entered restricted zone | Data: {'center': [482.5417785644531, 179.31381225585938]}
+[2026-09-07 06:39:55] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5022411346435547}
+[2026-09-07 06:39:55] ZONE_ENTRY: Person p46_17 entered restricted zone | Data: {'center': [462.1484680175781, 178.9224090576172]}
+[2026-09-07 06:39:55] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.49232709407806396}
+[2026-09-07 06:39:56] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4351499676704407}
+[2026-09-07 06:39:56] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.41909873485565186}
+[2026-09-07 06:39:58] ZONE_ENTRY: Person p47_17 entered restricted zone | Data: {'center': [472.18438720703125, 179.2251434326172]}
+[2026-09-07 06:39:58] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3673352003097534}
+[2026-09-07 06:39:58] PROLONGED_STAY: Person p46_17 in zone for 3.2s | Data: {'dwell_time': 3.2095162868499756}
+[2026-09-07 06:39:58] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4163907766342163}
+[2026-09-07 06:39:59] PROLONGED_STAY: Person p46_17 in zone for 3.8s | Data: {'dwell_time': 3.814570903778076}
+[2026-09-07 06:40:03] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3079646825790405}
+[2026-09-07 06:40:17] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.304604172706604}
+[2026-09-07 06:40:18] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4046820402145386}
+[2026-09-07 06:40:23] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3227819502353668}
+[2026-09-07 06:40:24] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.34454357624053955}
+[2026-09-07 06:40:27] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4074440598487854}
+[2026-09-07 06:40:32] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3039814531803131}
+[2026-09-07 06:40:37] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.31063443422317505}
+[2026-09-07 06:40:37] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.30315127968788147}
+[2026-09-07 06:40:42] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3607647716999054}
+[2026-09-07 06:40:46] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4515267610549927}
+[2026-09-07 06:40:48] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3193412721157074}
+[2026-09-07 06:40:49] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3440856337547302}
+[2026-09-07 06:40:51] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.40607166290283203}
+[2026-09-07 06:40:52] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46518534421920776}
+[2026-09-07 06:40:52] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.34976857900619507}
+[2026-09-07 06:40:59] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3041720688343048}
+[2026-09-07 06:41:02] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.41151174902915955}
+[2026-09-07 06:41:04] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.40579086542129517}
+[2026-09-07 06:41:05] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3209615647792816}
+[2026-09-07 06:41:07] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.31415316462516785}
+[2026-09-07 06:41:07] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3298380374908447}
+[2026-09-07 06:41:12] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4804004728794098}
+[2026-09-07 06:41:14] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.41881704330444336}
+[2026-09-07 06:41:16] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4969809353351593}
+[2026-09-07 06:41:17] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.43478870391845703}
+[2026-09-07 06:41:21] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.30027177929878235}
+[2026-09-07 06:41:23] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.39925143122673035}
+[2026-09-07 06:41:24] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3604676425457001}
+[2026-09-07 06:41:24] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.30807048082351685}
+[2026-09-07 06:41:25] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46504002809524536}
+[2026-09-07 06:41:25] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.39167213439941406}
+[2026-09-07 06:41:28] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3180714249610901}
+[2026-09-07 06:41:29] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3578282594680786}
+[2026-09-07 06:41:30] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3822603225708008}
+[2026-09-07 06:41:34] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.36414867639541626}
+[2026-09-07 06:41:36] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3240566551685333}
+[2026-09-07 06:41:40] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.39671391248703003}
+[2026-09-07 06:41:43] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3385891914367676}
+[2026-09-07 06:41:43] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.34449800848960876}
+[2026-09-07 06:41:46] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4515966773033142}
+[2026-09-07 06:41:47] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3727624714374542}
+[2026-09-07 06:41:49] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5029765367507935}
+[2026-09-07 06:42:02] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.3556843101978302}
+[2026-09-07 06:42:07] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.41986408829689026}
+[2026-09-07 06:42:08] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.45566561818122864}
+[2026-09-07 06:42:11] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4770275056362152}
+[2026-09-07 06:45:34] ZONE_ENTRY: Person p53_17 entered restricted zone | Data: {'center': [533.7156372070312, 177.565673828125]}
+[2026-09-07 06:45:59] ZONE_ENTRY: Person p57_17 entered restricted zone | Data: {'center': [570.3056030273438, 177.67156982421875]}
+[2026-09-07 06:45:59] ZONE_ENTRY: Person p56_17 entered restricted zone | Data: {'center': [564.7763824462891, 177.9013671875]}
+[2026-09-07 06:46:00] ZONE_ENTRY: Person p55_17 entered restricted zone | Data: {'center': [559.4140777587891, 177.989990234375]}
+[2026-09-07 06:47:15] ZONE_ENTRY: Person p50_18 entered restricted zone | Data: {'center': [503.5425720214844, 180.52392578125]}
+[2026-09-07 06:47:16] ZONE_ENTRY: Person p50_17 entered restricted zone | Data: {'center': [500.14349365234375, 178.56646728515625]}
+[2026-09-07 06:47:19] PROLONGED_STAY: Person p50_17 in zone for 3.5s | Data: {'dwell_time': 3.484140157699585}
+[2026-09-07 06:47:20] ZONE_ENTRY: Person p51_17 entered restricted zone | Data: {'center': [510.4912109375, 177.29547119140625]}
+[2026-09-07 06:47:20] ZONE_ENTRY: Person p51_16 entered restricted zone | Data: {'center': [513.8992919921875, 160.16867065429688]}
+[2026-09-07 06:47:43] PROLONGED_STAY: Person p56_17 in zone for 103.5s | Data: {'dwell_time': 103.46118664741516}
+[2026-09-07 06:56:22] ZONE_ENTRY: Person p52_17 entered restricted zone | Data: {'center': [527.03173828125, 178.55575561523438]}
+[2026-09-07 06:56:23] PROLONGED_STAY: Person p51_17 in zone for 543.0s | Data: {'dwell_time': 543.045422077179}
+[2026-09-07 06:56:44] ZONE_ENTRY: Person p45_18 entered restricted zone | Data: {'center': [459.6089782714844, 188.43704223632812]}
+[2026-09-07 06:56:46] ZONE_ENTRY: Person p51_21 entered restricted zone | Data: {'center': [515.3995513916016, 218.55953979492188]}
+[2026-09-07 06:56:47] ZONE_ENTRY: Person p56_21 entered restricted zone | Data: {'center': [560.8029174804688, 216.4991455078125]}
+[2026-09-07 06:56:47] ZONE_ENTRY: Person p52_21 entered restricted zone | Data: {'center': [528.9234619140625, 219.37655639648438]}
+[2026-09-07 06:56:47] ZONE_ENTRY: Person p46_21 entered restricted zone | Data: {'center': [461.5719909667969, 216.09886169433594]}
+[2026-09-07 06:56:48] ZONE_ENTRY: Person p53_21 entered restricted zone | Data: {'center': [530.6430511474609, 214.668212890625]}
+[2026-09-07 06:56:50] PROLONGED_STAY: Person p52_21 in zone for 3.3s | Data: {'dwell_time': 3.3000261783599854}
+[2026-09-07 06:56:51] PROLONGED_STAY: Person p52_21 in zone for 3.8s | Data: {'dwell_time': 3.8491110801696777}
+[2026-09-07 06:56:52] PROLONGED_STAY: Person p52_21 in zone for 4.6s | Data: {'dwell_time': 4.61888313293457}
+[2026-09-07 06:56:52] PROLONGED_STAY: Person p52_21 in zone for 5.1s | Data: {'dwell_time': 5.142028570175171}
+[2026-09-07 06:56:53] PROLONGED_STAY: Person p52_21 in zone for 5.6s | Data: {'dwell_time': 5.646044492721558}
+[2026-09-07 06:56:53] ZONE_ENTRY: Person p52_20 entered restricted zone | Data: {'center': [526.7204742431641, 204.80685424804688]}
+[2026-09-07 06:56:54] PROLONGED_STAY: Person p52_21 in zone for 6.7s | Data: {'dwell_time': 6.668759107589722}
+[2026-09-07 06:56:54] PROLONGED_STAY: Person p52_21 in zone for 7.2s | Data: {'dwell_time': 7.180151462554932}
+[2026-09-07 06:56:55] PROLONGED_STAY: Person p52_21 in zone for 7.7s | Data: {'dwell_time': 7.74441385269165}
+[2026-09-07 06:56:55] PROLONGED_STAY: Person p52_21 in zone for 8.3s | Data: {'dwell_time': 8.273576498031616}
+[2026-09-07 06:56:56] PROLONGED_STAY: Person p52_21 in zone for 9.1s | Data: {'dwell_time': 9.062177181243896}
+[2026-09-07 06:56:57] PROLONGED_STAY: Person p52_21 in zone for 9.6s | Data: {'dwell_time': 9.595357656478882}
+[2026-09-07 06:56:57] PROLONGED_STAY: Person p52_21 in zone for 10.1s | Data: {'dwell_time': 10.11571455001831}
+[2026-09-07 06:56:58] PROLONGED_STAY: Person p52_21 in zone for 10.7s | Data: {'dwell_time': 10.654336929321289}
+[2026-09-07 06:56:58] PROLONGED_STAY: Person p52_21 in zone for 11.2s | Data: {'dwell_time': 11.18089485168457}
+[2026-09-07 06:56:59] PROLONGED_STAY: Person p52_21 in zone for 11.8s | Data: {'dwell_time': 11.779031038284302}
+[2026-09-07 06:56:59] PROLONGED_STAY: Person p52_21 in zone for 12.3s | Data: {'dwell_time': 12.315457344055176}
+[2026-09-07 06:57:00] PROLONGED_STAY: Person p52_21 in zone for 12.9s | Data: {'dwell_time': 12.898834228515625}
+[2026-09-07 06:57:01] PROLONGED_STAY: Person p52_21 in zone for 13.7s | Data: {'dwell_time': 13.74515151977539}
+[2026-09-07 06:57:01] PROLONGED_STAY: Person p52_21 in zone for 14.4s | Data: {'dwell_time': 14.361004114151001}
+[2026-09-07 06:57:02] PROLONGED_STAY: Person p52_21 in zone for 15.0s | Data: {'dwell_time': 15.00715184211731}
+[2026-09-07 06:57:03] PROLONGED_STAY: Person p52_21 in zone for 15.6s | Data: {'dwell_time': 15.568812847137451}
+[2026-09-07 06:57:03] PROLONGED_STAY: Person p52_21 in zone for 16.1s | Data: {'dwell_time': 16.14868664741516}
+[2026-09-07 06:57:04] PROLONGED_STAY: Person p52_21 in zone for 17.3s | Data: {'dwell_time': 17.347247838974}
+[2026-09-07 06:57:05] PROLONGED_STAY: Person p52_21 in zone for 18.0s | Data: {'dwell_time': 17.96636962890625}
+[2026-09-07 06:57:06] PROLONGED_STAY: Person p52_20 in zone for 13.0s | Data: {'dwell_time': 12.975369453430176}
+[2026-09-07 06:57:07] PROLONGED_STAY: Person p52_20 in zone for 13.6s | Data: {'dwell_time': 13.635577917098999}
+[2026-09-07 06:57:07] ZONE_ENTRY: Person p53_19 entered restricted zone | Data: {'center': [531.4876708984375, 196.95925903320312]}
+[2026-09-07 06:57:08] ZONE_ENTRY: Person p53_20 entered restricted zone | Data: {'center': [533.3440093994141, 203.92526245117188]}
+[2026-09-07 06:57:13] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6007003784179688}
+[2026-09-07 06:57:17] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7201603651046753}
+[2026-09-07 06:57:18] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6805956959724426}
+[2026-09-07 06:57:19] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8828415870666504}
+[2026-09-07 06:57:19] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8220878839492798}
+[2026-09-07 06:57:20] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8631682991981506}
+[2026-09-07 06:57:20] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7959929704666138}
+[2026-09-07 06:57:21] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8344385027885437}
+[2026-09-07 06:57:22] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.776007354259491}
+[2026-09-07 06:57:22] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7945422530174255}
+[2026-09-07 06:57:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8255096673965454}
+[2026-09-07 06:57:34] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6752819418907166}
+[2026-09-07 06:57:34] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6352476477622986}
+[2026-09-07 06:57:36] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6133781671524048}
+[2026-09-07 06:57:37] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.606378972530365}
+[2026-09-07 06:57:40] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6051643490791321}
+[2026-09-07 06:57:43] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6596608757972717}
+[2026-09-07 06:57:43] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6297594904899597}
+[2026-09-07 06:57:48] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6363987922668457}
+[2026-09-07 06:57:48] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6769002676010132}
+[2026-09-07 06:57:49] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6304949522018433}
+[2026-09-07 06:57:49] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8037753701210022}
+[2026-09-07 06:57:49] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6544851064682007}
+[2026-09-07 06:57:50] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7885979413986206}
+[2026-09-07 06:57:50] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7300401329994202}
+[2026-09-07 06:57:51] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7253580689430237}
+[2026-09-07 06:57:51] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6552769541740417}
+[2026-09-07 06:57:52] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6925840973854065}
+[2026-09-07 06:57:57] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6232424974441528}
+[2026-09-07 06:58:02] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7171888947486877}
+[2026-09-07 06:58:03] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6605109572410583}
+[2026-09-07 06:58:06] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.711681067943573}
+[2026-09-07 06:58:20] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6054204702377319}
+[2026-09-07 06:58:21] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7314802408218384}
+[2026-09-07 06:58:21] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6799470782279968}
+[2026-09-07 06:58:22] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6265949010848999}
+[2026-09-07 06:58:24] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6268333792686462}
+[2026-09-07 06:58:25] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8533410429954529}
+[2026-09-07 06:58:27] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.600618302822113}
+[2026-09-07 06:58:27] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7803758978843689}
+[2026-09-07 06:58:28] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7227541208267212}
+[2026-09-07 06:58:28] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7465742826461792}
+[2026-09-07 06:58:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7033358216285706}
+[2026-09-07 06:58:44] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6035024523735046}
+[2026-09-07 06:58:53] ZONE_ENTRY: Person p45_11 entered restricted zone | Data: {'center': [452.6145935058594, 117.26887512207031]}
+[2026-09-07 06:58:58] ZONE_ENTRY: Person p55_20 entered restricted zone | Data: {'center': [558.8208618164062, 206.92703247070312]}
+[2026-09-07 06:59:00] ZONE_ENTRY: Person p52_18 entered restricted zone | Data: {'center': [523.958251953125, 187.45486450195312]}
+[2026-09-07 06:59:06] ZONE_ENTRY: Person p49_17 entered restricted zone | Data: {'center': [492.7647705078125, 177.95367431640625]}
+[2026-09-07 06:59:10] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6163273453712463}
+[2026-09-07 06:59:11] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7242528796195984}
+[2026-09-07 06:59:12] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6638171076774597}
+[2026-09-07 06:59:12] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7137822508811951}
+[2026-09-07 06:59:13] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6171771883964539}
+[2026-09-07 06:59:13] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7516444325447083}
+[2026-09-07 06:59:14] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6292857527732849}
+[2026-09-07 06:59:15] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7122249007225037}
+[2026-09-07 06:59:15] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7082904577255249}
+[2026-09-07 06:59:16] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7402765154838562}
+[2026-09-07 06:59:17] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6633424758911133}
+[2026-09-07 06:59:18] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6136451959609985}
+[2026-09-07 06:59:18] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6339015364646912}
+[2026-09-07 06:59:19] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6527739763259888}
+[2026-09-07 06:59:22] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6342645883560181}
+[2026-09-07 06:59:22] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6063454747200012}
+[2026-09-07 06:59:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6912854909896851}
+[2026-09-07 06:59:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6685401201248169}
+[2026-09-07 06:59:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6872574687004089}
+[2026-09-07 06:59:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6061825156211853}
+[2026-09-07 06:59:24] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6800945997238159}
+[2026-09-07 06:59:24] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6786124110221863}
+[2026-09-07 06:59:24] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7120816707611084}
+[2026-09-07 06:59:25] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7113597989082336}
+[2026-09-07 06:59:25] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6784412264823914}
+[2026-09-07 06:59:25] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6108595728874207}
+[2026-09-07 06:59:26] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7514486908912659}
+[2026-09-07 06:59:26] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7487504482269287}
+[2026-09-07 06:59:27] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7130932211875916}
+[2026-09-07 06:59:27] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7518355250358582}
+[2026-09-07 06:59:28] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6885733604431152}
+[2026-09-07 06:59:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7077985405921936}
+[2026-09-07 06:59:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7268272042274475}
+[2026-09-07 06:59:30] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7397047281265259}
+[2026-09-07 06:59:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7125774025917053}
+[2026-09-07 06:59:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7279204726219177}
+[2026-09-07 06:59:32] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6897661685943604}
+[2026-09-07 07:05:28] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.754831850528717}
+[2026-09-07 07:05:33] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7068430185317993}
+[2026-09-07 07:05:34] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7406263947486877}
+[2026-09-07 07:05:35] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7600057125091553}
+[2026-09-07 07:05:35] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7923986911773682}
+[2026-09-07 07:06:26] ZONE_ENTRY: Person p48_18 entered restricted zone | Data: {'center': [486.148193359375, 185.7567596435547]}
+[2026-09-07 07:06:28] ZONE_ENTRY: Person p50_18 entered restricted zone | Data: {'center': [508.54827880859375, 182.34278869628906]}
+[2026-09-07 07:10:29] ZONE_ENTRY: Person p59_18 entered restricted zone | Data: {'center': [591.7349853515625, 189.25465393066406]}
+[2026-09-07 07:19:09] ZONE_ENTRY: Person p51_17 entered restricted zone | Data: {'center': [515.0205078125, 177.31243896484375]}
+[2026-09-07 07:19:11] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7604681253433228, 'matched_person': None}
+[2026-09-07 07:19:12] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8488964438438416, 'matched_person': None}
+[2026-09-07 07:19:13] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8360236883163452, 'matched_person': None}
+[2026-09-07 07:19:13] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7870116829872131, 'matched_person': None}
+[2026-09-07 07:19:14] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7442161440849304, 'matched_person': None}
+[2026-09-07 07:22:43] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7205224633216858, 'matched_person': None}
+[2026-09-07 07:22:44] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7681083679199219, 'matched_person': None}
+[2026-09-07 07:23:20] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.772340714931488, 'matched_person': 'p37_24'}
+[2026-09-07 07:23:20] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 07:23:21] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8223773837089539, 'matched_person': 'p37_23'}
+[2026-09-07 07:23:21] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 07:23:25] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7988210916519165, 'matched_person': None}
+[2026-09-07 07:23:41] ZONE_ENTRY: Person p50_17 entered restricted zone | Data: {'center': [501.4505310058594, 177.9557342529297]}
+[2026-09-07 07:27:06] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.774146318435669, 'matched_person': None}
+[2026-09-07 07:27:07] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7842309474945068, 'matched_person': None}
+[2026-09-07 07:27:25] ZONE_ENTRY: Person p53_17 entered restricted zone | Data: {'center': [531.5371246337891, 178.17929077148438]}
+[2026-09-07 09:48:04] ZONE_ENTRY: Person p48_17 entered restricted zone | Data: {'center': [481.735595703125, 178.879638671875]}
+[2026-09-07 09:58:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8490814566612244, 'matched_person': None}
+[2026-09-07 09:59:02] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7545385956764221, 'matched_person': 'p40_24'}
+[2026-09-07 09:59:02] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 09:59:45] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8718140721321106, 'matched_person': None}
+[2026-09-07 09:59:49] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7126127481460571, 'matched_person': None}
+[2026-09-07 10:00:51] ZONE_ENTRY: Person p45_19 entered restricted zone | Data: {'center': [456.9344177246094, 198.63693237304688]}
+[2026-09-07 10:02:14] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7343793511390686, 'matched_person': None}
+[2026-09-07 10:02:46] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7063521146774292, 'matched_person': 'p42_22'}
+[2026-09-07 10:02:46] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 10:02:58] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.717780590057373, 'matched_person': None}
+[2026-09-07 10:25:47] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7017156481742859, 'matched_person': None}
+[2026-09-07 10:27:40] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8312883377075195, 'matched_person': None}
+[2026-09-07 10:27:44] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7052286267280579, 'matched_person': None}
+[2026-09-07 10:38:20] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7300591468811035, 'matched_person': 'p35_25'}
+[2026-09-07 10:38:20] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 10:38:21] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7640925049781799, 'matched_person': 'p35_25'}
+[2026-09-07 10:38:21] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 10:38:21] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8819719552993774, 'matched_person': 'p35_25'}
+[2026-09-07 10:38:22] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 10:38:22] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7472822070121765, 'matched_person': None}
+[2026-09-07 10:38:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8633847236633301, 'matched_person': 'p33_25'}
+[2026-09-07 10:38:23] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 10:38:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7503637671470642, 'matched_person': 'p33_25'}
+[2026-09-07 10:38:23] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 10:38:45] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8020759224891663, 'matched_person': None}
+[2026-09-07 10:38:45] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.729630172252655, 'matched_person': None}
+[2026-09-07 10:38:45] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7070847749710083, 'matched_person': None}
+[2026-09-07 10:38:47] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7098856568336487, 'matched_person': None}
+[2026-09-07 10:38:56] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7934379577636719, 'matched_person': None}
+[2026-09-07 10:39:25] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7607780694961548, 'matched_person': None}
+[2026-09-07 10:39:26] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7028998732566833, 'matched_person': None}
+[2026-09-07 10:39:26] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7200700044631958, 'matched_person': None}
+[2026-09-07 10:39:26] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7389528155326843, 'matched_person': None}
+[2026-09-07 10:39:26] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7145387530326843, 'matched_person': None}
+[2026-09-07 10:39:27] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7206503748893738, 'matched_person': None}
+[2026-09-07 10:39:28] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7370753884315491, 'matched_person': None}
+[2026-09-07 10:39:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7190427780151367, 'matched_person': None}
+[2026-09-07 10:39:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7012078166007996, 'matched_person': None}
+[2026-09-07 10:39:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7106302976608276, 'matched_person': None}
+[2026-09-07 10:39:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7191259860992432, 'matched_person': None}
+[2026-09-07 10:39:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7347725629806519, 'matched_person': None}
+[2026-09-07 10:39:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7228679656982422, 'matched_person': None}
+[2026-09-07 10:39:30] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7653680443763733, 'matched_person': None}
+[2026-09-07 10:39:30] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7303470373153687, 'matched_person': None}
+[2026-09-07 10:39:30] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7503691911697388, 'matched_person': None}
+[2026-09-07 10:39:30] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7456880211830139, 'matched_person': None}
+[2026-09-07 10:39:30] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7700428366661072, 'matched_person': None}
+[2026-09-07 10:39:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7601585984230042, 'matched_person': None}
+[2026-09-07 10:39:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7362217903137207, 'matched_person': None}
+[2026-09-07 10:39:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7709383368492126, 'matched_person': None}
+[2026-09-07 10:39:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7539255023002625, 'matched_person': None}
+[2026-09-07 10:39:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7679924368858337, 'matched_person': None}
+[2026-09-07 10:39:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.745093047618866, 'matched_person': None}
+[2026-09-07 10:39:32] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7075341939926147, 'matched_person': None}
+[2026-09-07 10:39:33] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7047181129455566, 'matched_person': None}
+[2026-09-07 10:39:33] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7143588066101074, 'matched_person': None}
+[2026-09-07 10:39:33] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7787057161331177, 'matched_person': None}
+[2026-09-07 10:39:35] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7687619924545288, 'matched_person': None}
+[2026-09-07 10:40:09] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7403849959373474, 'matched_person': None}
+[2026-09-07 10:40:10] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.773043692111969, 'matched_person': None}
+[2026-09-07 10:40:20] ZONE_ENTRY: Person p47_19 entered restricted zone | Data: {'center': [475.8326110839844, 195.74990844726562]}
+[2026-09-07 10:40:21] ZONE_ENTRY: Person p48_19 entered restricted zone | Data: {'center': [486.18255615234375, 195.0601806640625]}
+[2026-09-07 10:40:28] ZONE_ENTRY: Person p45_19 entered restricted zone | Data: {'center': [455.3897399902344, 196.53738403320312]}
+[2026-09-07 10:40:31] ZONE_ENTRY: Person p46_19 entered restricted zone | Data: {'center': [461.00445556640625, 193.5338897705078]}
+[2026-09-07 10:40:33] PROLONGED_STAY: Person p47_19 in zone for 13.0s | Data: {'dwell_time': 12.990911483764648}
+[2026-09-07 10:49:05] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.786837100982666, 'matched_person': None}
+[2026-09-07 10:49:05] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8072351813316345, 'matched_person': None}
+[2026-09-07 10:49:06] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8268452286720276, 'matched_person': None}
+[2026-09-07 10:49:07] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8289323449134827, 'matched_person': None}
+[2026-09-07 10:49:07] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8511719703674316, 'matched_person': None}
+[2026-09-07 10:49:07] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8152989745140076, 'matched_person': None}
+[2026-09-07 10:49:08] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.8137305378913879, 'matched_person': None}
+[2026-09-07 10:49:08] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7965797781944275, 'matched_person': None}
+[2026-09-07 10:49:08] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7701583504676819, 'matched_person': None}
+[2026-09-07 10:49:09] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.7152486443519592, 'matched_person': None}
+[2026-09-07 11:01:46] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6251776218414307, 'matched_person': None}
+[2026-09-07 11:01:46] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.5033273100852966, 'matched_person': None}
+[2026-09-07 11:02:26] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5282534956932068, 'matched_person': 'p37_22'}
+[2026-09-07 11:02:26] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:02:31] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5193777680397034, 'matched_person': 'p38_22'}
+[2026-09-07 11:02:31] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:02:31] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5743045210838318, 'matched_person': 'p38_22'}
+[2026-09-07 11:02:31] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:02:32] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5222402811050415, 'matched_person': 'p38_22'}
+[2026-09-07 11:02:32] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:03:58] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.538292407989502, 'matched_person': 'p38_21'}
+[2026-09-07 11:03:58] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:05:54] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.565047025680542, 'matched_person': 'p37_22'}
+[2026-09-07 11:05:54] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:08:07] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.49613794684410095, 'matched_person': None}
+[2026-09-07 11:08:14] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.45208680629730225, 'matched_person': None}
+[2026-09-07 11:08:26] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.470697283744812, 'matched_person': None}
+[2026-09-07 11:08:27] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.482837975025177, 'matched_person': None}
+[2026-09-07 11:08:27] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4522208869457245, 'matched_person': None}
+[2026-09-07 11:08:46] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.47721487283706665, 'matched_person': None}
+[2026-09-07 11:08:47] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5090543627738953, 'matched_person': None}
+[2026-09-07 11:08:47] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4885760247707367, 'matched_person': None}
+[2026-09-07 11:08:48] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.47293078899383545, 'matched_person': None}
+[2026-09-07 11:08:49] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5182380676269531, 'matched_person': None}
+[2026-09-07 11:08:49] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4978671371936798, 'matched_person': None}
+[2026-09-07 11:08:49] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.45109859108924866, 'matched_person': None}
+[2026-09-07 11:09:10] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4671177566051483, 'matched_person': None}
+[2026-09-07 11:09:10] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.45575016736984253, 'matched_person': None}
+[2026-09-07 11:09:10] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46961158514022827, 'matched_person': None}
+[2026-09-07 11:09:11] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46239611506462097, 'matched_person': None}
+[2026-09-07 11:09:11] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.483916312456131, 'matched_person': None}
+[2026-09-07 11:09:11] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46701887249946594, 'matched_person': None}
+[2026-09-07 11:09:13] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4578820466995239, 'matched_person': None}
+[2026-09-07 11:09:13] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.45617637038230896, 'matched_person': None}
+[2026-09-07 11:09:14] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4550023078918457, 'matched_person': None}
+[2026-09-07 11:09:15] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4915274381637573, 'matched_person': None}
+[2026-09-07 11:09:16] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.45337092876434326, 'matched_person': None}
+[2026-09-07 11:09:17] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4552222490310669, 'matched_person': None}
+[2026-09-07 11:09:18] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4851665794849396, 'matched_person': None}
+[2026-09-07 11:10:16] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.5119215250015259, 'matched_person': None}
+[2026-09-07 11:10:17] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.47509288787841797, 'matched_person': None}
+[2026-09-07 11:11:04] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4786280691623688, 'matched_person': None}
+[2026-09-07 11:11:06] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.47466862201690674, 'matched_person': None}
+[2026-09-07 11:11:07] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4546019434928894, 'matched_person': None}
+[2026-09-07 11:11:07] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4509430229663849, 'matched_person': None}
+[2026-09-07 11:11:08] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4508242607116699, 'matched_person': None}
+[2026-09-07 11:11:11] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4516976475715637, 'matched_person': None}
+[2026-09-07 11:11:14] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.49062028527259827, 'matched_person': None}
+[2026-09-07 11:11:18] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.45243170857429504, 'matched_person': None}
+[2026-09-07 11:11:32] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46096277236938477, 'matched_person': None}
+[2026-09-07 11:11:44] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.6844844222068787, 'matched_person': None}
+[2026-09-07 11:12:43] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.45100027322769165, 'matched_person': None}
+[2026-09-07 11:12:45] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4664023518562317, 'matched_person': None}
+[2026-09-07 11:12:48] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4663762152194977, 'matched_person': None}
+[2026-09-07 11:13:03] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4761105477809906, 'matched_person': None}
+[2026-09-07 11:13:08] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.4707682430744171, 'matched_person': None}
+[2026-09-07 11:13:22] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46580687165260315, 'matched_person': None}
+[2026-09-07 11:13:40] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46217161417007446, 'matched_person': None}
+[2026-09-07 11:13:47] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.46181055903434753, 'matched_person': None}
+[2026-09-07 11:15:27] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.7567999958992004, 'matched_person': 'p33_21'}
+[2026-09-07 11:15:27] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:15:27] WEAPON_DETECTED: guns detected! | Data: {'confidence': 0.6545689702033997, 'matched_person': 'p33_21'}
+[2026-09-07 11:15:27] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:24:41] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3087747097015381, 'matched_person': 'p34_22'}
+[2026-09-07 11:24:41] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:07] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2539103329181671, 'matched_person': 'p35_22'}
+[2026-09-07 11:25:07] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:19] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2813172936439514, 'matched_person': 'p36_22'}
+[2026-09-07 11:25:19] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:19] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2522050440311432, 'matched_person': 'p35_22'}
+[2026-09-07 11:25:19] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:42] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2681039273738861, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:42] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:43] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2655037045478821, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:43] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:43] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.28328001499176025, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:43] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:44] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.39282897114753723, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:44] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:44] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3395392596721649, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:44] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:44] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2766993045806885, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:44] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:45] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2559944689273834, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:45] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:46] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.28554216027259827, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:46] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:55] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.36142420768737793, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:55] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:56] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2711629271507263, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:56] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:56] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.25536543130874634, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:56] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:57] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2508355379104614, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:57] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:57] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3067496716976166, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:57] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:58] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.28104299306869507, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:58] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:58] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2594034671783447, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:58] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:58] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.259040892124176, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:58] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:59] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2721748948097229, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:59] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:59] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3167303502559662, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:59] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:25:59] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.4205663502216339, 'matched_person': 'p37_22'}
+[2026-09-07 11:25:59] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:00] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.27073150873184204, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:00] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:01] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2651151716709137, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:01] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:01] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3103134036064148, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:01] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:01] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.28545325994491577, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:01] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:02] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.251717209815979, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:02] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:02] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3187595009803772, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:02] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:03] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2997581660747528, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:03] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:03] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.273154616355896, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:03] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:03] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.33927178382873535, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:03] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:08] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.29427239298820496, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:08] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:08] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2801993787288666, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:08] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:09] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2801993787288666, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:09] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:09] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.269025057554245, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:09] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:09] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.29267406463623047, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:09] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:10] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.271127849817276, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:10] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:10] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.28787845373153687, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:10] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:10] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2659067213535309, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:10] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:11] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2935274839401245, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:11] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:11] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2965589463710785, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:11] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:12] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2615751028060913, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:12] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:13] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.28552135825157166, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:13] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:13] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.27482685446739197, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:13] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:14] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.35146841406822205, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:14] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:14] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.35048478841781616, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:14] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:15] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2980705797672272, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:15] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:16] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.26534751057624817, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:16] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:17] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.310345858335495, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:17] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:18] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.26556524634361267, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:18] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:18] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.29742488265037537, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:18] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:19] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.25848591327667236, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:19] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:21] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2871497869491577, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:21] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:23] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.27810895442962646, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:23] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:24] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2585407495498657, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:24] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:26] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2956168055534363, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:26] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:27] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.30191951990127563, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:27] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:27] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3055402934551239, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:27] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:28] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.25564080476760864, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:28] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:29] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3046666085720062, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:29] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:30] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.27012526988983154, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:30] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:31] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.29536885023117065, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:31] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:32] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.27397483587265015, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:32] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:32] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2513852119445801, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:32] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:33] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.25980088114738464, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:33] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:34] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.28922778367996216, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:34] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:34] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3049323260784149, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:34] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:35] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3010663688182831, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:35] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:36] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.26439303159713745, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:36] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:37] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.31139782071113586, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:37] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:26:41] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2509036362171173, 'matched_person': 'p37_22'}
+[2026-09-07 11:26:41] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:43] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2513021230697632, 'matched_person': 'p35_22'}
+[2026-09-07 11:27:43] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:49] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3406243920326233, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:49] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:51] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.4004550874233246, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:51] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:52] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.30053162574768066, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:52] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:52] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.31158292293548584, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:52] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:53] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3004608750343323, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:53] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:54] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.27490726113319397, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:54] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:54] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.3612254559993744, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:54] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:54] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.27259525656700134, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:55] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:55] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2854851484298706, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:55] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:55] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.311164528131485, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:55] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:56] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.27565324306488037, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:56] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:57] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.39121830463409424, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:57] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:58] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2600487172603607, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:58] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:27:58] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.35116416215896606, 'matched_person': 'p33_22'}
+[2026-09-07 11:27:58] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:28:03] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.35556548833847046, 'matched_person': 'p37_22'}
+[2026-09-07 11:28:03] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:28:05] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.28088346123695374, 'matched_person': 'p37_22'}
+[2026-09-07 11:28:05] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:28:05] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2834632396697998, 'matched_person': 'p37_22'}
+[2026-09-07 11:28:05] THREAT_ALERT: 1 armed person(s) detected! | Data: {'armed_persons': 1}
+[2026-09-07 11:28:11] WEAPON_DETECTED: knife detected! | Data: {'confidence': 0.2520773410797119, 'matched_person': None}

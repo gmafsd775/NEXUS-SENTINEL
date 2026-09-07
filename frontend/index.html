@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>NEXUS SENTINEL</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ============================================
+           RESET & ROOT
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cyber-cyan: #00d4ff;
+            --cyber-green: #00ff88;
+            --cyber-orange: #ff8800;
+            --cyber-red: #ff2244;
+            --text-primary: #e8edf5;
+            --text-secondary: #7a8aaa;
+            --text-muted: #3a4a6a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #060a12;
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 24px;
+            background-image:
+                radial-gradient(ellipse at 20% 10%, rgba(0, 212, 255, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 90%, rgba(0, 255, 136, 0.04) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 300%;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, var(--cyber-cyan), var(--cyber-green), transparent);
+            animation: scanline 8s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% {
+                transform: translateX(-33%);
+            }
+            100% {
+                transform: translateX(33%);
+            }
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 1;
+        }
+
+        .header-brand .logo-wrap {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(0, 255, 136, 0.06));
+            border: 1px solid rgba(0, 212, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--cyber-cyan);
+        }
+
+        .header-brand h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-green));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-brand .version {
+            font-size: 9px;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 2px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+        }
+
+        .status-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 18px 6px 14px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            font-family: 'Orbitron', monospace;
+        }
+
+        .status-pill .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .status-pill .dot.online {
+            background: var(--cyber-green);
+            box-shadow: 0 0 16px rgba(0, 255, 136, 0.4);
+            animation: pulse-dot 1.5s ease-in-out infinite;
+        }
+        .status-pill .dot.offline {
+            background: var(--cyber-red);
+            box-shadow: 0 0 16px rgba(255, 34, 68, 0.3);
+        }
+        .status-pill .dot.connecting {
+            background: #ffaa33;
+            box-shadow: 0 0 16px rgba(255, 170, 51, 0.3);
+            animation: pulse-dot 0.6s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(0.6);
+            }
+        }
+
+        .header-status .fps-badge {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 0.5px;
+        }
+
+        /* ========== GRID ========== */
+        .grid-main {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 28px;
+        }
+
+        @media (max-width: 1100px) {
+            .grid-main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ========== CARDS ========== */
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 24px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent, rgba(255, 255, 255, 0.02));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .card-header i {
+            color: var(--cyber-cyan);
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .card-header .badge-count {
+            margin-left: auto;
+            font-size: 10px;
+            color: var(--text-muted);
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2px 12px;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ========== VIDEO ========== */
+        .video-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            aspect-ratio: 16 / 9;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        #overlayCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .video-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 18px 22px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 20;
+        }
+
+        .video-overlay .cam-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+        }
+
+        .video-overlay .cam-indicator .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .video-overlay .cam-indicator .dot.on {
+            background: var(--cyber-green);
+            box-shadow: 0 0 16px rgba(0, 255, 136, 0.3);
+            animation: pulse-dot 1.5s ease-in-out infinite;
+        }
+        .video-overlay .cam-indicator .dot.off {
+            background: var(--cyber-red);
+            box-shadow: 0 0 16px rgba(255, 34, 68, 0.2);
+        }
+
+        .video-controls {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 28px;
+            border: none;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 212, 255, 0.05));
+            color: var(--cyber-cyan);
+            border: 1px solid rgba(0, 212, 255, 0.15);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.25), rgba(0, 212, 255, 0.08));
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-primary);
+        }
+
+        /* ========== SIDEBAR ========== */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* ========== STATUS HERO ========== */
+        .status-hero {
+            text-align: center;
+            padding: 32px 20px 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .status-hero .ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .status-hero .ring:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            border-color: rgba(255, 255, 255, 0.015);
+            animation: spin 20s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .status-hero .icon-wrap {
+            font-size: 56px;
+            margin-bottom: 6px;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .status-hero .icon-wrap.safe {
+            color: var(--cyber-green);
+            filter: drop-shadow(0 0 40px rgba(0, 255, 136, 0.15));
+        }
+        .status-hero .icon-wrap.alert {
+            color: var(--cyber-red);
+            filter: drop-shadow(0 0 40px rgba(255, 34, 68, 0.25));
+            animation: pulse-icon 0.8s ease-in-out infinite;
+        }
+        .status-hero .icon-wrap.weapon {
+            color: var(--cyber-orange);
+            filter: drop-shadow(0 0 50px rgba(255, 136, 0, 0.3));
+            animation: pulse-icon 0.5s ease-in-out infinite;
+        }
+        .status-hero .icon-wrap.threat {
+            color: #ff2200;
+            filter: drop-shadow(0 0 60px rgba(255, 34, 0, 0.4));
+            animation: pulse-icon 0.3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-icon {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.06);
+            }
+        }
+
+        .status-hero .label {
+            font-family: 'Orbitron', monospace;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .status-hero .label.safe {
+            color: var(--cyber-green);
+        }
+        .status-hero .label.alert {
+            color: var(--cyber-red);
+            animation: blink-text 0.8s ease-in-out infinite;
+        }
+        .status-hero .label.weapon {
+            color: var(--cyber-orange);
+            animation: blink-text 0.5s ease-in-out infinite;
+        }
+        .status-hero .label.threat {
+            color: #ff2200;
+            animation: blink-text 0.3s ease-in-out infinite;
+        }
+
+        @keyframes blink-text {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .status-hero .sub {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-top: 2px;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.3px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-block {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 14px;
+            padding: 16px 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: border-color 0.3s ease;
+        }
+
+        .stat-block:hover {
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .stat-block .value {
+            font-family: 'Orbitron', monospace;
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        .stat-block .value.cyan {
+            color: var(--cyber-cyan);
+        }
+        .stat-block .value.red {
+            color: var(--cyber-red);
+        }
+        .stat-block .value.orange {
+            color: var(--cyber-orange);
+        }
+
+        .stat-block .lbl {
+            font-size: 9px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        .stat-block .lbl i {
+            margin-right: 4px;
+            font-size: 9px;
+        }
+
+        /* ========== PERFORMANCE METRICS ========== */
+        .perf-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 14px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            position: relative;
+            z-index: 1;
+        }
+
+        .perf-metrics .metric-item {
+            text-align: center;
+        }
+
+        .perf-metrics .metric-item .value {
+            font-family: 'Orbitron', monospace;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .perf-metrics .metric-item .value.cyan {
+            color: var(--cyber-cyan);
+        }
+        .perf-metrics .metric-item .value.green {
+            color: var(--cyber-green);
+        }
+        .perf-metrics .metric-item .value.orange {
+            color: var(--cyber-orange);
+        }
+
+        .perf-metrics .metric-item .lbl {
+            font-size: 8px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+            font-weight: 600;
+        }
+
+        /* ========== PERSON LIST ========== */
+        .person-list {
+            max-height: 190px;
+            overflow-y: auto;
+            padding-right: 2px;
+        }
+
+        .person-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.015);
+            border-radius: 10px;
+            margin-bottom: 4px;
+            border-left: 2.5px solid rgba(0, 255, 136, 0.3);
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .person-entry:hover {
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .person-entry .info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+        }
+
+        .person-entry .info i {
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .person-entry .info .id {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .person-entry .tags {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 2px 10px;
+            border-radius: 30px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .tag-safe {
+            background: rgba(0, 255, 136, 0.08);
+            color: var(--cyber-green);
+        }
+        .tag-zone {
+            background: rgba(255, 34, 68, 0.10);
+            color: var(--cyber-red);
+        }
+        .tag-move {
+            background: rgba(255, 136, 0, 0.10);
+            color: var(--cyber-orange);
+        }
+        .tag-weapon {
+            background: rgba(255, 136, 0, 0.18);
+            color: var(--cyber-orange);
+            animation: blink-text 0.8s ease-in-out infinite;
+        }
+        .tag-threat {
+            background: rgba(255, 34, 0, 0.20);
+            color: #ff4444;
+            animation: blink-text 0.4s ease-in-out infinite;
+        }
+        .tag-prolonged {
+            background: rgba(255, 34, 68, 0.15);
+            color: #ff4466;
+        }
+
+        .person-entry.zone {
+            border-left-color: var(--cyber-red);
+            background: rgba(255, 34, 68, 0.04);
+        }
+        .person-entry.weapon {
+            border-left-color: var(--cyber-orange);
+            background: rgba(255, 136, 0, 0.05);
+        }
+        .person-entry.threat {
+            border-left-color: #ff2200;
+            background: rgba(255, 34, 0, 0.06);
+            animation: pulse-border 0.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-border {
+            0%,
+            100% {
+                border-left-color: #ff2200;
+            }
+            50% {
+                border-left-color: #ff6644;
+            }
+        }
+
+        /* ========== EVENT LIST ========== */
+        .event-list {
+            max-height: 200px;
+            overflow-y: auto;
+            padding-right: 2px;
+        }
+
+        .event-entry {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.01);
+            border-radius: 8px;
+            margin-bottom: 3px;
+            font-size: 11px;
+            border-left: 2px solid rgba(255, 255, 255, 0.04);
+            transition: background 0.2s ease;
+        }
+
+        .event-entry:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .event-entry .time {
+            color: var(--text-muted);
+            font-size: 9px;
+            font-family: 'Orbitron', monospace;
+            letter-spacing: 0.5px;
+            min-width: 64px;
+        }
+
+        .event-entry .etype {
+            font-size: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-family: 'Orbitron', monospace;
+            white-space: nowrap;
+        }
+
+        .event-entry .etype.entry {
+            background: rgba(0, 255, 136, 0.08);
+            color: var(--cyber-green);
+        }
+        .event-entry .etype.exit {
+            background: rgba(255, 170, 51, 0.08);
+            color: #ffaa33;
+        }
+        .event-entry .etype.prolonged {
+            background: rgba(255, 34, 68, 0.10);
+            color: var(--cyber-red);
+        }
+        .event-entry .etype.movement {
+            background: rgba(255, 136, 0, 0.08);
+            color: var(--cyber-orange);
+        }
+        .event-entry .etype.weapon {
+            background: rgba(255, 136, 0, 0.14);
+            color: var(--cyber-orange);
+        }
+        .event-entry .etype.threat {
+            background: rgba(255, 34, 0, 0.18);
+            color: #ff4444;
+        }
+
+        .event-entry .msg {
+            color: var(--text-secondary);
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 400;
+        }
+
+        .event-empty {
+            color: var(--text-muted);
+            text-align: center;
+            padding: 24px 10px;
+            font-size: 12px;
+        }
+
+        .event-empty i {
+            display: block;
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.03);
+        }
+
+        /* ========== LOG ========== */
+        .log-list {
+            max-height: 100px;
+            overflow-y: auto;
+            padding-right: 2px;
+        }
+
+        .log-list .log-entry {
+            padding: 3px 10px;
+            font-size: 10px;
+            color: var(--text-muted);
+            font-family: 'Inter', monospace;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .log-list .log-entry .ts {
+            color: rgba(255, 255, 255, 0.06);
+            font-size: 9px;
+        }
+
+        /* ========== TOAST ========== */
+        .toast-container {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            max-width: 400px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .toast {
+            padding: 16px 22px;
+            border-radius: 16px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 16px 64px rgba(0, 0, 0, 0.5);
+            animation: slideToast 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .toast.zone {
+            background: rgba(200, 30, 50, 0.92);
+        }
+        .toast.prolonged {
+            background: rgba(180, 20, 40, 0.94);
+        }
+        .toast.movement {
+            background: rgba(200, 110, 0, 0.92);
+        }
+        .toast.weapon {
+            background: rgba(200, 80, 0, 0.94);
+            border-color: rgba(255, 200, 0, 0.15);
+            animation: toastPulse 0.8s ease-in-out infinite;
+        }
+        .toast.threat {
+            background: rgba(180, 20, 0, 0.96);
+            border-color: rgba(255, 255, 0, 0.15);
+            animation: toastPulse 0.4s ease-in-out infinite;
+        }
+
+        @keyframes toastPulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes slideToast {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .toast i {
+            font-size: 20px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .toast .close {
+            margin-left: auto;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: opacity 0.2s ease;
+            font-size: 14px;
+        }
+
+        .toast .close:hover {
+            opacity: 1;
+        }
+
+        /* ============================================
+           MOBILE RESPONSIVE
+           ============================================ */
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
+            .header {
+                padding: 10px 14px;
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+                gap: 8px;
+                border-radius: 16px;
+                margin-bottom: 12px;
+            }
+            .header-brand {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .header-brand h1 {
+                font-size: 16px;
+            }
+            .header-brand .logo-wrap {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+            .header-status {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .status-pill {
+                padding: 4px 12px;
+                font-size: 9px;
+            }
+            .header-status .fps-badge {
+                font-size: 9px;
+            }
+            .grid-main {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .card {
+                padding: 12px;
+                border-radius: 14px;
+            }
+            .card-header {
+                font-size: 9px;
+                letter-spacing: 1px;
+                margin-bottom: 12px;
+            }
+            .card-header .badge-count {
+                font-size: 8px;
+                padding: 1px 8px;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4px;
+                margin-top: 12px;
+            }
+            .stat-block {
+                padding: 8px 4px;
+                border-radius: 10px;
+            }
+            .stat-block .value {
+                font-size: 16px;
+            }
+            .stat-block .lbl {
+                font-size: 7px;
+                letter-spacing: 0.5px;
+            }
+            .perf-metrics {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4px;
+                padding: 8px;
+                margin-top: 10px;
+            }
+            .perf-metrics .metric-item .value {
+                font-size: 14px;
+            }
+            .perf-metrics .metric-item .lbl {
+                font-size: 7px;
+            }
+            .status-hero {
+                padding: 18px 12px 16px;
+            }
+            .status-hero .icon-wrap {
+                font-size: 32px;
+                margin-bottom: 2px;
+            }
+            .status-hero .label {
+                font-size: 14px;
+                letter-spacing: 1.5px;
+            }
+            .status-hero .sub {
+                font-size: 10px;
+            }
+            .status-hero .ring {
+                width: 100px;
+                height: 100px;
+            }
+            .status-hero .ring:nth-child(2) {
+                width: 130px;
+                height: 130px;
+            }
+            .person-entry {
+                padding: 6px 10px;
+                font-size: 10px;
+                border-left-width: 2px;
+            }
+            .person-entry .info i {
+                font-size: 10px;
+            }
+            .tag {
+                font-size: 7px;
+                padding: 1px 6px;
+                letter-spacing: 0.5px;
+            }
+            .event-entry {
+                padding: 4px 10px;
+                font-size: 9px;
+                gap: 6px;
+            }
+            .event-entry .time {
+                font-size: 7px;
+                min-width: 40px;
+            }
+            .event-entry .etype {
+                font-size: 7px;
+                padding: 1px 6px;
+            }
+            .event-entry .msg {
+                font-size: 8px;
+            }
+            .log-list .log-entry {
+                font-size: 8px;
+                padding: 2px 8px;
+            }
+            .btn {
+                padding: 8px 16px;
+                font-size: 10px;
+                gap: 6px;
+                border-radius: 8px;
+            }
+            .video-controls {
+                gap: 6px;
+                margin-top: 12px;
+            }
+            .video-overlay {
+                padding: 10px 12px;
+            }
+            .video-overlay .cam-indicator {
+                font-size: 9px;
+            }
+            .video-overlay .cam-indicator .dot {
+                width: 5px;
+                height: 5px;
+            }
+            .toast-container {
+                max-width: 95%;
+                right: 2.5%;
+                top: 8px;
+            }
+            .toast {
+                padding: 10px 14px;
+                font-size: 11px;
+                border-radius: 12px;
+                gap: 8px;
+            }
+            .toast i {
+                font-size: 16px;
+                width: 18px;
+            }
+            .person-list {
+                max-height: 120px;
+            }
+            .event-list {
+                max-height: 130px;
+            }
+            .log-list {
+                max-height: 70px;
+            }
+            .sidebar {
+                gap: 12px;
+            }
+            #overlayCanvas {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media (max-width: 768px) and (min-width: 481px) {
+            body {
+                padding: 12px;
+            }
+            .header {
+                padding: 12px 18px;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 16px;
+            }
+            .header-brand h1 {
+                font-size: 18px;
+            }
+            .grid-main {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .card {
+                padding: 16px;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            .stat-block .value {
+                font-size: 22px;
+            }
+            .perf-metrics .metric-item .value {
+                font-size: 16px;
+            }
+            .status-hero .icon-wrap {
+                font-size: 44px;
+            }
+            .status-hero .label {
+                font-size: 18px;
+            }
+            .btn {
+                padding: 9px 20px;
+                font-size: 11px;
+            }
+            .person-list {
+                max-height: 140px;
+            }
+            .event-list {
+                max-height: 150px;
+            }
+            .log-list {
+                max-height: 80px;
+            }
+            .sidebar {
+                gap: 16px;
+            }
+        }
+
+        @media (max-height: 500px) and (orientation: landscape) {
+            body {
+                padding: 6px 12px;
+            }
+            .header {
+                padding: 6px 14px;
+                margin-bottom: 8px;
+                border-radius: 14px;
+            }
+            .header-brand h1 {
+                font-size: 14px;
+            }
+            .header-brand .logo-wrap {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+            }
+            .header-brand .version {
+                font-size: 7px;
+                padding: 1px 8px;
+            }
+            .status-pill {
+                padding: 3px 10px;
+                font-size: 8px;
+            }
+            .header-status .fps-badge {
+                font-size: 8px;
+            }
+            .header-status {
+                gap: 8px;
+            }
+            .grid-main {
+                grid-template-columns: 1fr 280px;
+                gap: 10px;
+            }
+            .card {
+                padding: 8px 12px;
+                border-radius: 12px;
+            }
+            .card-header {
+                font-size: 8px;
+                margin-bottom: 6px;
+                letter-spacing: 1px;
+            }
+            .card-header .badge-count {
+                font-size: 7px;
+                padding: 1px 8px;
+            }
+            .status-hero {
+                padding: 10px 8px 8px;
+            }
+            .status-hero .icon-wrap {
+                font-size: 24px;
+                margin-bottom: 0px;
+            }
+            .status-hero .label {
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+            .status-hero .sub {
+                font-size: 8px;
+            }
+            .status-hero .ring {
+                width: 70px;
+                height: 70px;
+            }
+            .status-hero .ring:nth-child(2) {
+                width: 90px;
+                height: 90px;
+            }
+            .stats-grid {
+                gap: 4px;
+                margin-top: 6px;
+            }
+            .stat-block {
+                padding: 4px 4px;
+                border-radius: 8px;
+            }
+            .stat-block .value {
+                font-size: 14px;
+            }
+            .stat-block .lbl {
+                font-size: 6px;
+                letter-spacing: 0.5px;
+                margin-top: 0px;
+            }
+            .perf-metrics {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4px;
+                padding: 6px;
+                margin-top: 6px;
+            }
+            .perf-metrics .metric-item .value {
+                font-size: 12px;
+            }
+            .perf-metrics .metric-item .lbl {
+                font-size: 6px;
+            }
+            .video-wrapper {
+                aspect-ratio: 16 / 9;
+                max-height: 160px;
+            }
+            .video-overlay {
+                padding: 6px 10px;
+            }
+            .video-overlay .cam-indicator {
+                font-size: 8px;
+            }
+            .video-overlay .cam-indicator .dot {
+                width: 4px;
+                height: 4px;
+            }
+            .video-controls {
+                gap: 4px;
+                margin-top: 6px;
+            }
+            .btn {
+                padding: 4px 12px;
+                font-size: 8px;
+                gap: 4px;
+                border-radius: 6px;
+            }
+            .person-list {
+                max-height: 60px;
+            }
+            .event-list {
+                max-height: 70px;
+            }
+            .log-list {
+                max-height: 40px;
+            }
+            .person-entry {
+                padding: 3px 8px;
+                font-size: 8px;
+                margin-bottom: 2px;
+                border-left-width: 2px;
+            }
+            .person-entry .info i {
+                font-size: 8px;
+            }
+            .tag {
+                font-size: 6px;
+                padding: 1px 5px;
+                letter-spacing: 0.3px;
+            }
+            .event-entry {
+                padding: 2px 8px;
+                font-size: 8px;
+                gap: 4px;
+                margin-bottom: 2px;
+            }
+            .event-entry .time {
+                font-size: 6px;
+                min-width: 30px;
+            }
+            .event-entry .etype {
+                font-size: 6px;
+                padding: 1px 4px;
+            }
+            .event-entry .msg {
+                font-size: 7px;
+            }
+            .log-list .log-entry {
+                font-size: 7px;
+                padding: 1px 6px;
+            }
+            .toast-container {
+                max-width: 60%;
+                right: 4px;
+                top: 4px;
+                gap: 4px;
+            }
+            .toast {
+                padding: 6px 10px;
+                font-size: 9px;
+                border-radius: 8px;
+                gap: 6px;
+            }
+            .toast i {
+                font-size: 12px;
+                width: 14px;
+            }
+            .sidebar {
+                gap: 10px;
+            }
+        }
+
+        @media (max-height: 400px) and (orientation: landscape) {
+            .grid-main {
+                grid-template-columns: 1fr 220px;
+                gap: 8px;
+            }
+            .header-brand h1 {
+                font-size: 12px;
+            }
+            .header-brand .logo-wrap {
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+            }
+            .status-pill {
+                padding: 2px 8px;
+                font-size: 7px;
+            }
+            .video-wrapper {
+                max-height: 120px;
+            }
+            .stat-block .value {
+                font-size: 12px;
+            }
+            .perf-metrics .metric-item .value {
+                font-size: 10px;
+            }
+            .person-list {
+                max-height: 40px;
+            }
+            .event-list {
+                max-height: 50px;
+            }
+            .log-list {
+                max-height: 30px;
+            }
+            .person-entry {
+                padding: 2px 6px;
+                font-size: 7px;
+            }
+            .event-entry {
+                padding: 1px 6px;
+                font-size: 7px;
+            }
+            .event-entry .time {
+                min-width: 24px;
+                font-size: 5px;
+            }
+            .btn {
+                padding: 3px 8px;
+                font-size: 7px;
+            }
+            .status-hero .icon-wrap {
+                font-size: 18px;
+            }
+            .status-hero .label {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ========== HEADER ========== -->
+        <header class="header">
+            <div class="header-brand">
+                <div class="logo-wrap"><i class="fas fa-shield-halved"></i></div>
+                <div>
+                    <h1>NEXUS SENTINEL</h1>
+                    <span style="display:flex;gap:6px;align-items:center;margin-top:-2px;">
+                        <span class="version">v2.0</span>
+                        <span style="font-size:9px;color:var(--text-muted);letter-spacing:0.5px;">· enterprise</span>
+                    </span>
+                </div>
+            </div>
+            <div class="header-status">
+                <div class="status-pill">
+                    <span class="dot connecting" id="wsDot"></span>
+                    <span id="wsStatusText">Connecting</span>
+                </div>
+                <span class="fps-badge" id="frameStatusText"><i class="fas fa-video"></i> OFF</span>
+                <span class="fps-badge" id="fpsDisplay"><i class="fas fa-chart-line"></i> 0 FPS</span>
+            </div>
+        </header>
+
+        <!-- ========== GRID ========== -->
+        <div class="grid-main">
+
+            <!-- LEFT -->
+            <div>
+
+                <!-- VIDEO -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-camera"></i> Live Feed
+                        <span class="badge-count" id="camStatusText">Offline</span>
+                    </div>
+                    <div class="video-wrapper">
+                        <video id="camera" autoplay playsinline></video>
+                        <canvas id="overlayCanvas"></canvas>
+                        <div class="video-overlay">
+                            <span class="cam-indicator">
+                                <span class="dot off" id="camDot"></span>
+                                <span id="camStatusLabel">Offline</span>
+                            </span>
+                            <span style="color:var(--text-muted);font-size:10px;font-family:'Orbitron',monospace;letter-spacing:0.5px;">
+                                <i class="fas fa-arrows-spin"></i> 640×360
+                            </span>
+                        </div>
+                    </div>
+                    <div class="video-controls">
+                        <button class="btn btn-primary" id="startCamera"><i class="fas fa-play"></i> Start</button>
+                        <button class="btn btn-secondary" id="stopCamera" disabled><i class="fas fa-stop"></i> Stop</button>
+                    </div>
+                </div>
+
+                <!-- SYSTEM LOG -->
+                <div class="card" style="margin-top:20px;">
+                    <div class="card-header">
+                        <i class="fas fa-terminal"></i> System Log
+                        <span class="badge-count">live</span>
+                    </div>
+                    <div class="log-list" id="messages">
+                        <div class="log-entry"><span class="ts">●</span> Waiting for system messages...</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="sidebar">
+
+                <!-- STATUS HERO -->
+                <div class="card status-hero">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <i class="fas fa-shield-halved icon-wrap safe" id="statusIcon"></i>
+                    <div class="label safe" id="statusLabel">SECURE</div>
+                    <div class="sub" id="statusSub">All systems nominal</div>
+
+                    <div class="stats-grid">
+                        <div class="stat-block">
+                            <div class="value cyan" id="personCountDisplay">0</div>
+                            <div class="lbl"><i class="fas fa-users"></i> Persons</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="value red" id="zoneCountDisplay">0</div>
+                            <div class="lbl"><i class="fas fa-triangle-exclamation"></i> In Zone</div>
+                        </div>
+                        <div class="stat-block">
+                            <div class="value orange" id="weaponCountDisplay">0</div>
+                            <div class="lbl"><i class="fas fa-gun"></i> Weapons</div>
+                        </div>
+                    </div>
+
+                    <!-- Performance Metrics -->
+                    <div class="perf-metrics">
+                        <div class="metric-item">
+                            <div class="value cyan" id="fpsMetric">0</div>
+                            <div class="lbl">FPS</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="value green" id="latencyMetric">0ms</div>
+                            <div class="lbl">Latency</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="value orange" id="detectionsMetric">0</div>
+                            <div class="lbl">Detections</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERSONS -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i> Detected Persons
+                        <span class="badge-count" id="personCountLabel">0</span>
+                    </div>
+                    <div class="person-list" id="personsList">
+                        <div style="color:var(--text-muted);text-align:center;padding:24px 10px;font-size:12px;">
+                            <i class="fas fa-eye-slash" style="display:block;font-size:26px;margin-bottom:6px;color:rgba(255,255,255,0.03);"></i>
+                            No persons detected
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EVENTS -->
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-clock-rotate-left"></i> Event History
+                        <span class="badge-count" id="eventCountLabel">0</span>
+                    </div>
+                    <div class="event-list" id="eventHistory">
+                        <div class="event-empty">
+                            <i class="fas fa-inbox"></i>
+                            No events recorded
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========== TOAST ========== -->
+    <div class="toast-container" id="toastContainer"></div>
+
+
+    <script>
+        // ============================================
+        // DOM REFS
+        // ============================================
+        const $ = id => document.getElementById(id);
+
+        const camera = $('camera');
+        const overlayCanvas = $('overlayCanvas');
+        const ctx = overlayCanvas.getContext('2d');
+
+        overlayCanvas.width = 640;
+        overlayCanvas.height = 360;
+
+        const startBtn = $('startCamera');
+        const stopBtn = $('stopCamera');
+        const camDot = $('camDot');
+        const camStatusLabel = $('camStatusLabel');
+        const camStatusText = $('camStatusText');
+        const wsDot = $('wsDot');
+        const wsStatusText = $('wsStatusText');
+        const frameStatusText = $('frameStatusText');
+        const fpsDisplay = $('fpsDisplay');
+
+        const personCountDisplay = $('personCountDisplay');
+        const zoneCountDisplay = $('zoneCountDisplay');
+        const weaponCountDisplay = $('weaponCountDisplay');
+        const personCountLabel = $('personCountLabel');
+        const personsList = $('personsList');
+        const eventHistory = $('eventHistory');
+        const eventCountLabel = $('eventCountLabel');
+        const messages = $('messages');
+        const toastContainer = $('toastContainer');
+
+        const statusIcon = $('statusIcon');
+        const statusLabel = $('statusLabel');
+        const statusSub = $('statusSub');
+
+        const fpsMetric = $('fpsMetric');
+        const latencyMetric = $('latencyMetric');
+        const detectionsMetric = $('detectionsMetric');
+
+        let detectionCount = 0;
+
+        const ZONE_X1 = 450;
+        const ZONE_Y1 = 0;
+        const ZONE_X2 = 640;
+        const ZONE_Y2 = 220;
+
+        // ============================================
+        // WEBSOCKET
+        // ============================================
+        let socket = null;
+        let reconnectTimer = null;
+
+        function connectWebSocket() {
+            socket = new WebSocket(`ws://${window.location.host}/ws`);
+
+            socket.onopen = function() {
+                wsDot.className = 'dot online';
+                wsStatusText.textContent = 'Online';
+            };
+
+            socket.onmessage = function(e) {
+                try {
+                    const startTime = performance.now();
+                    handleMessage(JSON.parse(e.data));
+                    const endTime = performance.now();
+                    const latency = Math.round(endTime - startTime);
+                    latencyMetric.textContent = latency + 'ms';
+                } catch (_) {}
+            };
+
+            socket.onerror = function() {
+                wsDot.className = 'dot offline';
+                wsStatusText.textContent = 'Error';
+            };
+
+            socket.onclose = function() {
+                wsDot.className = 'dot offline';
+                wsStatusText.textContent = 'Disconnected';
+                if (reconnectTimer) clearTimeout(reconnectTimer);
+                reconnectTimer = setTimeout(connectWebSocket, 3000);
+            };
+        }
+
+        // ============================================
+        // DRAW BOUNDING BOXES
+        // ============================================
+        function drawBoxes(persons, weapons) {
+            ctx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
+
+            ctx.strokeStyle = 'rgba(255, 68, 68, 0.35)';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([8, 6]);
+            ctx.strokeRect(ZONE_X1, ZONE_Y1, ZONE_X2 - ZONE_X1, ZONE_Y2 - ZONE_Y1);
+            ctx.setLineDash([]);
+
+            ctx.fillStyle = 'rgba(255, 68, 68, 0.5)';
+            ctx.font = '10px Orbitron, monospace';
+            ctx.fillText('⛔ RESTRICTED ZONE', ZONE_X1 + 12, ZONE_Y1 + 18);
+
+            if (weapons) {
+                weapons.forEach(w => {
+                    const [x1, y1, x2, y2] = w.bbox;
+                    const conf = Math.round(w.confidence * 100);
+
+                    ctx.strokeStyle = 'rgba(255, 68, 0, 0.9)';
+                    ctx.lineWidth = 2.5;
+                    ctx.fillStyle = 'rgba(255, 68, 0, 0.10)';
+                    ctx.shadowColor = 'rgba(255, 68, 0, 0.5)';
+                    ctx.shadowBlur = 15;
+                    ctx.fillRect(x1, y1, x2 - x1, y2 - y1);
+                    ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
+                    ctx.shadowBlur = 0;
+
+                    ctx.fillStyle = 'rgba(255, 68, 0, 0.9)';
+                    ctx.font = '10px Orbitron, monospace';
+                    ctx.fillText(`🔫 ${w.name} ${conf}%`, x1 + 4, y1 - 6);
+                });
+            }
+
+            if (persons) {
+                persons.forEach(p => {
+                    const [x1, y1, x2, y2] = p.bbox;
+                    const inZone = p.in_zone || false;
+                    const hasWeapon = p.has_weapon || false;
+                    const isThreat = p.threat_level === 'high' || false;
+
+                    let color = 'rgba(0, 255, 136, 0.8)';
+                    let fillColor = 'rgba(0, 255, 136, 0.06)';
+                    let label = '👤 Person';
+
+                    if (isThreat) {
+                        color = 'rgba(255, 34, 0, 0.9)';
+                        fillColor = 'rgba(255, 34, 0, 0.15)';
+                        label = '⚠️ THREAT';
+                    } else if (hasWeapon) {
+                        color = 'rgba(255, 136, 0, 0.9)';
+                        fillColor = 'rgba(255, 136, 0, 0.12)';
+                        label = '🔫 Armed';
+                    } else if (inZone) {
+                        color = 'rgba(255, 68, 68, 0.8)';
+                        fillColor = 'rgba(255, 68, 68, 0.08)';
+                        label = '🚨 Zone';
+                    }
+
+                    ctx.strokeStyle = color;
+                    ctx.lineWidth = 2.5;
+                    ctx.fillStyle = fillColor;
+                    ctx.shadowColor = color;
+                    ctx.shadowBlur = 10;
+                    ctx.fillRect(x1, y1, x2 - x1, y2 - y1);
+                    ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
+                    ctx.shadowBlur = 0;
+
+                    ctx.fillStyle = color;
+                    ctx.font = '10px Orbitron, monospace';
+                    ctx.fillText(label, x1 + 4, y1 - 6);
+
+                    const cx = (x1 + x2) / 2;
+                    const cy = (y1 + y2) / 2;
+                    ctx.fillStyle = color;
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, 3, 0, 2 * Math.PI);
+                    ctx.fill();
+                });
+            }
+        }
+
+        // ============================================
+        // MESSAGE HANDLER
+        // ============================================
+        function handleMessage(data) {
+            if (data.type === 'system') { addLog(data.message); return; }
+            if (data.type === 'event_log') { addEvent(data); return; }
+
+            if (data.type === 'prolonged_alert') {
+                toast('⛔ ' + data.message, 'prolonged');
+                addLog('PROLONGED: ' + data.message);
+                beep();
+                setTimeout(beep, 400);
+                return;
+            }
+
+            if (data.type === 'movement_alert') {
+                toast('🏃 ' + data.message, 'movement');
+                addLog('MOVEMENT: ' + data.message);
+                beep();
+                return;
+            }
+
+            if (data.type === 'weapon_alert') {
+                const pct = Math.round(data.confidence * 100);
+                toast(`🔫 ${data.weapon} (${pct}%)`, 'weapon');
+                addLog(`WEAPON: ${data.weapon} (${pct}%)`);
+
+                statusIcon.className = 'fas fa-gun icon-wrap weapon';
+                statusLabel.textContent = 'WEAPON';
+                statusLabel.className = 'label weapon';
+                statusSub.textContent = `${data.weapon} detected`;
+
+                const cur = parseInt(weaponCountDisplay.textContent) || 0;
+                weaponCountDisplay.textContent = cur + 1;
+
+                detectionCount++;
+                detectionsMetric.textContent = detectionCount;
+
+                beep();
+                setTimeout(beep, 300);
+
+                addEvent({
+                    timestamp: new Date().toLocaleTimeString(),
+                    event_type: 'WEAPON_DETECTED',
+                    message: `${data.weapon} (${pct}%)`
+                });
+                return;
+            }
+
+            if (data.type === 'threat_alert') {
+                toast(`⚡ ${data.message}`, 'threat');
+                addLog(`THREAT: ${data.message}`);
+
+                statusIcon.className = 'fas fa-skull-crossbones icon-wrap threat';
+                statusLabel.textContent = 'THREAT';
+                statusLabel.className = 'label threat';
+                statusSub.textContent = data.message;
+
+                beep();
+                setTimeout(beep, 400);
+                setTimeout(beep, 800);
+
+                addEvent({
+                    timestamp: new Date().toLocaleTimeString(),
+                    event_type: 'THREAT_ALERT',
+                    message: data.message
+                });
+                return;
+            }
+
+            if (data.type === 'detection') {
+                updateUI(data);
+                drawBoxes(data.persons || [], data.weapons || []);
+
+                if (data.persons && data.persons.length > 0) {
+                    detectionCount++;
+                    detectionsMetric.textContent = detectionCount;
+                }
+                return;
+            }
+
+            if (data.type === 'echo') { addLog('Echo: ' + data.message); return; }
+        }
+
+        // ============================================
+        // UI UPDATE
+        // ============================================
+        function updateUI(data) {
+            const count = data.person_count || 0;
+            const persons = data.persons || [];
+            const zoneActive = data.restricted_zone || false;
+            const wCount = data.weapon_count || 0;
+            const threat = data.threat_detected || false;
+
+            personCountDisplay.textContent = count;
+            personCountLabel.textContent = count;
+
+            const zoneCount = persons.filter(p => p.in_zone).length;
+            zoneCountDisplay.textContent = zoneCount;
+
+            if (wCount > 0) weaponCountDisplay.textContent = wCount;
+
+            if (!threat && wCount === 0) {
+                if (zoneActive) {
+                    statusIcon.className = 'fas fa-triangle-exclamation icon-wrap alert';
+                    statusLabel.textContent = 'ALERT';
+                    statusLabel.className = 'label alert';
+                    statusSub.textContent = 'Person in restricted zone';
+                    beep();
+                } else {
+                    statusIcon.className = 'fas fa-shield-halved icon-wrap safe';
+                    statusLabel.textContent = 'SECURE';
+                    statusLabel.className = 'label safe';
+                    statusSub.textContent = 'All systems nominal';
+                }
+            }
+
+            if (persons.length === 0) {
+                personsList.innerHTML =
+                    `<div style="color:var(--text-muted);text-align:center;padding:24px 10px;font-size:12px;">
+                        <i class="fas fa-eye-slash" style="display:block;font-size:26px;margin-bottom:6px;color:rgba(255,255,255,0.03);"></i>
+                        No persons detected
+                    </div>`;
+                return;
+            }
+
+            let html = '';
+            persons.forEach((p, i) => {
+                const inZone = p.in_zone || false;
+                const prolonged = p.prolonged || false;
+                const move = p.movement_detected || false;
+                const hasWeapon = p.has_weapon || false;
+                const isThreat = p.threat_level === 'high' || false;
+                const cx = Math.round(p.center[0]);
+                const cy = Math.round(p.center[1]);
+
+                let tags = '';
+                if (inZone) tags += `<span class="tag tag-zone">Zone</span>`;
+                if (prolonged) tags += `<span class="tag tag-prolonged">Prolonged</span>`;
+                if (move) tags += `<span class="tag tag-move">Move</span>`;
+                if (hasWeapon) tags += `<span class="tag tag-weapon">Weapon</span>`;
+                if (isThreat) tags += `<span class="tag tag-threat">Threat</span>`;
+                if (!inZone && !move && !hasWeapon && !isThreat) tags += `<span class="tag tag-safe">Safe</span>`;
+
+                let cls = 'person-entry';
+                if (inZone) cls += ' zone';
+                if (hasWeapon) cls += ' weapon';
+                if (isThreat) cls += ' threat';
+
+                html += `
+                    <div class="${cls}">
+                        <span class="info">
+                            <i class="fas fa-user"></i>
+                            <span class="id">#${i+1}</span>
+                            <span style="color:var(--text-muted);font-size:10px;">(${cx},${cy})</span>
+                        </span>
+                        <span class="tags">${tags}</span>
+                    </div>
+                `;
+            });
+            personsList.innerHTML = html;
+        }
+
+        // ============================================
+        // EVENT HISTORY
+        // ============================================
+        let eventCount = 0;
+
+        function addEvent(data) {
+            const empty = eventHistory.querySelector('.event-empty');
+            if (empty) empty.remove();
+
+            const div = document.createElement('div');
+            div.className = 'event-entry';
+
+            const map = {
+                'ZONE_ENTRY': 'entry',
+                'ZONE_EXIT': 'exit',
+                'PROLONGED_STAY': 'prolonged',
+                'MOVEMENT_ALERT': 'movement',
+                'WEAPON_DETECTED': 'weapon',
+                'THREAT_ALERT': 'threat'
+            };
+            const cls = map[data.event_type] || 'entry';
+
+            div.innerHTML = `
+                <span class="time">${data.timestamp || '--:--:--'}</span>
+                <span class="etype ${cls}">${data.event_type || 'EVENT'}</span>
+                <span class="msg">${data.message || ''}</span>
+            `;
+
+            eventHistory.prepend(div);
+
+            while (eventHistory.children.length > 50) {
+                eventHistory.removeChild(eventHistory.lastChild);
+            }
+
+            eventCount++;
+            eventCountLabel.textContent = eventCount;
+        }
+
+        // ============================================
+        // LOG
+        // ============================================
+        function addLog(text) {
+            const empty = messages.querySelector('.log-entry');
+            if (empty && messages.children.length === 1) empty.remove();
+
+            const div = document.createElement('div');
+            div.className = 'log-entry';
+            const ts = new Date().toLocaleTimeString();
+            div.innerHTML = `<span class="ts">[${ts}]</span> ${text}`;
+            messages.prepend(div);
+
+            while (messages.children.length > 30) {
+                messages.removeChild(messages.lastChild);
+            }
+        }
+
+        // ============================================
+        // TOAST
+        // ============================================
+        function toast(message, type = 'zone') {
+            const icons = {
+                zone: 'fa-triangle-exclamation',
+                prolonged: 'fa-circle-exclamation',
+                movement: 'fa-person-running',
+                weapon: 'fa-gun',
+                threat: 'fa-skull-crossbones'
+            };
+
+            const div = document.createElement('div');
+            div.className = `toast ${type}`;
+            div.innerHTML = `
+                <i class="fas ${icons[type] || 'fa-bell'}"></i>
+                <span>${message}</span>
+                <span class="close" onclick="this.parentElement.remove()">✕</span>
+            `;
+
+            toastContainer.prepend(div);
+
+            setTimeout(() => { if (div.parentElement) div.remove(); }, 6000);
+
+            while (toastContainer.children.length > 5) {
+                toastContainer.removeChild(toastContainer.lastChild);
+            }
+        }
+
+        // ============================================
+        // BEEP
+        // ============================================
+        function beep() {
+            try {
+                const ctx = new(window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.frequency.value = 820;
+                osc.type = 'square';
+                gain.gain.value = 0.15;
+                osc.start();
+                setTimeout(() => { osc.stop();
+                    ctx.close(); }, 140);
+            } catch (_) {}
+        }
+
+        // ============================================
+        // CAMERA - ULTIMATE FAST (80ms = 12.5 FPS)
+        // ============================================
+        let stream = null;
+        let frameTimer = null;
+        let frameCount = 0;
+        let fpsTimer = null;
+
+        async function startCamera() {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({
+                    video: { width: 640, height: 360 },
+                    audio: false
+                });
+
+                camera.srcObject = stream;
+                await camera.play();
+
+                camDot.className = 'dot on';
+                camStatusLabel.textContent = 'Online';
+                camStatusText.textContent = 'Online';
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+                frameStatusText.innerHTML = '<i class="fas fa-video"></i> ON';
+
+                startFrameTx();
+                startFPS();
+
+            } catch (e) {
+                camStatusLabel.textContent = 'Error';
+                camStatusText.textContent = 'Error';
+                console.error(e);
+            }
+        }
+
+        function stopCamera() {
+            if (stream) { stream.getTracks().forEach(t => t.stop());
+                stream = null; }
+            camera.srcObject = null;
+            camDot.className = 'dot off';
+            camStatusLabel.textContent = 'Offline';
+            camStatusText.textContent = 'Offline';
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            frameStatusText.innerHTML = '<i class="fas fa-video"></i> OFF';
+
+            if (frameTimer) clearInterval(frameTimer);
+            if (fpsTimer) clearInterval(fpsTimer);
+            frameCount = 0;
+            fpsDisplay.innerHTML = '<i class="fas fa-chart-line"></i> 0 FPS';
+            fpsMetric.textContent = '0';
+
+            ctx.clearRect(0, 0, overlayCanvas.width, overlayCanvas.height);
+        }
+
+        function startFrameTx() {
+            if (frameTimer) clearInterval(frameTimer);
+
+            const canvas = document.createElement('canvas');
+            canvas.width = 640;
+            canvas.height = 360;
+            const cctx = canvas.getContext('2d');
+
+            // ✅ ULTIMATE FAST: 80ms = 12.5 FPS
+            frameTimer = setInterval(() => {
+                if (!socket || socket.readyState !== WebSocket.OPEN) return;
+                if (camera.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) return;
+
+                cctx.drawImage(camera, 0, 0, 640, 360);
+                canvas.toBlob((blob) => {
+                    if (blob) {
+                        socket.send(blob);
+                        frameCount++;
+                    }
+                }, 'image/jpeg', 0.6);
+            }, 80); // ✅ 80ms = 12.5 FPS
+        }
+
+        function startFPS() {
+            if (fpsTimer) clearInterval(fpsTimer);
+            frameCount = 0;
+            fpsTimer = setInterval(() => {
+                const fps = Math.round(frameCount * 12.5);
+                fpsDisplay.innerHTML = `<i class="fas fa-chart-line"></i> ${fps} FPS`;
+                fpsMetric.textContent = fps;
+                frameCount = 0;
+            }, 1000);
+        }
+
+        // ============================================
+        // INIT
+        // ============================================
+        connectWebSocket();
+
+        startBtn.addEventListener('click', startCamera);
+        stopBtn.addEventListener('click', stopCamera);
+
+        setTimeout(() => addLog('NEXUS SENTINEL initialized - Fast Mode'), 400);
+        console.log('NEXUS SENTINEL v2.0 · Ultimate Fast Mode (12.5 FPS)');
+    </script>
+
+</body>
+
+</html>
